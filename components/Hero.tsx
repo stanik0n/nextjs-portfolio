@@ -70,10 +70,9 @@ export default function Hero() {
               opacity: 0, animation: "fade-up 0.7s 0.3s ease forwards",
             }}
           >
-            Data engineer with 4+ years building production data infrastructure.
-            I've worked across cloud migrations, real-time streaming pipelines, and
-            operational reporting platforms at enterprise scale. MS in MIS from the
-            University of Houston. Based in Houston, open to relocation.
+            I build data infrastructure that holds up in production. Pipelines,
+            warehouses, streaming systems — the kind of work where reliability
+            actually matters.
           </p>
 
           <div

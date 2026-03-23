@@ -11,16 +11,16 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
           <div className="space-y-5 text-[17px] leading-relaxed" style={{ color: "var(--text)" }}>
             <p>
-              I&apos;m a data engineer with <span style={{ color: "var(--white)" }}>4+ years of experience</span> building production data infrastructure. I&apos;ve worked across enterprise cloud migrations, real-time streaming pipelines, and operational reporting platforms at scale.
+              I have <span style={{ color: "var(--white)" }}>4+ years</span> of hands-on experience across the full data stack. I started my career at a software firm in Hyderabad, where I spent three years doing enterprise-scale work: a Salesforce-to-AWS migration, Redshift warehouse design, Kafka ingestion layers, and PySpark pipelines processing tens of millions of records.
             </p>
             <p>
-              Most recently I&apos;ve been working on community impact analytics at a nonprofit, and before that spent three years at a software firm in Hyderabad doing Salesforce-to-AWS migrations and Kafka ingestion pipelines for large enterprise clients.
+              After that I moved to Houston for my <span className="font-mono text-[0.88em]" style={{ color: "var(--accent)" }}>Master&apos;s in MIS at the University of Houston</span>, and since graduating I&apos;ve been doing analytics engineering at a nonprofit, building their reporting infrastructure from scratch using PostgreSQL, Python ETL, and FastAPI.
             </p>
             <p>
-              I hold a <span className="font-mono text-[0.88em]" style={{ color: "var(--accent)" }}>Master&apos;s in MIS</span> from the University of Houston. I care about systems that are reliable and observable, not just ones that run.
+              I like working on systems where the data actually has to be correct — grant reporting, real-time pipelines, operational dashboards. The kind of work where bad data has real consequences.
             </p>
             <p>
-              Currently looking for data engineering roles. Open to relocation.
+              Looking for a data engineering role where I can work on high-throughput infrastructure. Open to relocation.
             </p>
           </div>
 
