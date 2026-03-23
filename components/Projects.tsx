@@ -1,0 +1,171 @@
+"use client";
+import { projects } from "@/lib/data";
+import { SectionLabel, SectionTitle } from "./SectionHeading";
+
+const tagColors: Record<string, string> = {
+  accent:  "var(--accent)",
+  accent2: "var(--accent2)",
+  accent3: "var(--accent3)",
+};
+
+export default function Projects() {
+  return (
+    <section
+      id="projects"
+      className="py-28"
+      style={{ background: "var(--bg1)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
+    >
+      <div className="max-w-6xl mx-auto px-12">
+        <SectionLabel>02 — Work</SectionLabel>
+        <SectionTitle>Projects</SectionTitle>
+        <p className="text-[17px] mb-14 max-w-xl leading-relaxed" style={{ color: "var(--muted)" }}>
+          End-to-end systems built to demonstrate real throughput, real
+          architectural tradeoffs, and production-grade thinking.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {projects.map((p) => (
+            <div
+              key={p.id}
+              className={`rounded-lg overflow-hidden flex flex-col transition-all duration-300 group ${
+                p.featured ? "md:col-span-2 md:grid md:grid-cols-2" : ""
+              }`}
+              style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLElement;
+                el.style.borderColor = "var(--border2)";
+                el.style.transform = "translateY(-3px)";
+                el.style.boxShadow = "0 20px 55px rgba(0,0,0,0.45)";
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLElement;
+                el.style.borderColor = "var(--border)";
+                el.style.transform = "";
+                el.style.boxShadow = "";
+              }}
+            >
+              {/* visual */}
+              <div
+                className="relative overflow-hidden flex items-center justify-center"
+                style={{ background: "var(--bg2)", minHeight: p.featured ? "260px" : "200px" }}
+              >
+                <ProjectViz id={p.id} />
+              </div>
+
+              {/* body */}
+              <div className={`flex flex-col p-7 ${p.featured ? "justify-center" : ""}`}>
+                <div
+                  className="font-mono text-[10px] uppercase tracking-wider mb-2"
+                  style={{ color: tagColors[p.tagColor] || "var(--accent)" }}
+                >
+                  {p.tag}
+                </div>
+                <h3
+                  className="font-display font-bold mb-2 tracking-tight"
+                  style={{ fontSize: p.featured ? "26px" : "20px", color: "var(--white)", letterSpacing: "-0.02em" }}
+                >
+                  {p.title}
+                </h3>
+                <p className="text-[14px] leading-relaxed mb-4 flex-1" style={{ color: "var(--text)" }}>
+                  {p.desc}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {p.stack.map((s) => (
+                    <span
+                      key={s}
+                      className="font-mono text-[10px] px-2 py-0.5 rounded-sm"
+                      style={{ color: "var(--muted)", background: "var(--bg2)", border: "1px solid var(--border)" }}
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-4">
+                  {p.links.map((l) => (
+                    <a
+                      key={l.label}
+                      href={l.href}
+                      target={l.href.startsWith("http") ? "_blank" : undefined}
+                      rel="noreferrer"
+                      className="font-mono text-[11px] uppercase tracking-wider transition-opacity hover:opacity-60"
+                      style={{ color: l.primary ? "var(--accent)" : "var(--muted)" }}
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectViz({ id }: { id: string }) {
+  if (id === "skystream") {
+    return (
+      <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99,195,255,0.06)" strokeWidth="1"/>
+        </pattern>
+        <rect width="480" height="300" fill="url(#g)"/>
+        <radialGradient id="mg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#63c3ff" stopOpacity="0.06"/>
+          <stop offset="100%" stopColor="#63c3ff" stopOpacity="0"/>
+        </radialGradient>
+        <rect width="480" height="300" fill="url(#mg)"/>
+        <g opacity="0.35">
+          <polyline points="30,190 120,155 220,135 330,115 430,85" fill="none" stroke="#22c55e" strokeWidth="1" strokeDasharray="4,4"/>
+          <polyline points="70,55 155,95 240,125 340,155 440,195" fill="none" stroke="#3b82f6" strokeWidth="1" strokeDasharray="4,4"/>
+          <polyline points="15,130 100,122 200,115 305,108 405,95" fill="none" stroke="#3b82f6" strokeWidth="1" strokeDasharray="4,4"/>
+          <polyline points="55,265 140,230 240,195 340,172 430,152" fill="none" stroke="#f97316" strokeWidth="1" strokeDasharray="4,4"/>
+        </g>
+        <polygon points="0,0 -4,7 0,4 4,7" fill="#22c55e" transform="translate(430,85) rotate(-45)">
+          <animateMotion dur="20s" repeatCount="indefinite" path="M0,0 L-400,105"/>
+        </polygon>
+        <polygon points="0,0 -4,7 0,4 4,7" fill="#3b82f6" transform="translate(70,55) rotate(40)">
+          <animateMotion dur="24s" repeatCount="indefinite" path="M0,0 L370,140"/>
+        </polygon>
+        <polygon points="0,0 -4,7 0,4 4,7" fill="#f97316" transform="translate(430,152) rotate(-155)">
+          <animateMotion dur="22s" repeatCount="indefinite" path="M0,0 L-375,113"/>
+        </polygon>
+        <circle cx="240" cy="150" r="4" fill="rgba(99,195,255,0.5)">
+          <animate attributeName="r" values="4;44;4" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0;0.5" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <text x="20" y="284" fontFamily="monospace" fontSize="9" fill="rgba(99,195,255,0.35)" letterSpacing="2">SKYSTREAM · LIVE · ~9,000 AIRCRAFT</text>
+      </svg>
+    );
+  }
+  if (id === "url-shortener") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <radialGradient id="ug"><stop offset="0%" stopColor="#00e5b0" stopOpacity="0.1"/><stop offset="100%" stopColor="#00e5b0" stopOpacity="0"/></radialGradient>
+        <rect width="280" height="180" fill="url(#ug)"/>
+        <g fontFamily="monospace" fontSize="9" fill="rgba(0,229,176,0.65)" letterSpacing="1">
+          <rect x="20" y="70" width="60" height="30" rx="3" fill="rgba(0,229,176,0.05)" stroke="rgba(0,229,176,0.25)" strokeWidth="1"/>
+          <text x="50" y="88" textAnchor="middle">REQUEST</text>
+          <rect x="110" y="70" width="60" height="30" rx="3" fill="rgba(0,229,176,0.05)" stroke="rgba(0,229,176,0.25)" strokeWidth="1"/>
+          <text x="140" y="88" textAnchor="middle">REDIS</text>
+          <rect x="200" y="70" width="60" height="30" rx="3" fill="rgba(0,229,176,0.04)" stroke="rgba(0,229,176,0.2)" strokeWidth="1"/>
+          <text x="230" y="88" textAnchor="middle">POSTGRES</text>
+          <line x1="80" y1="85" x2="108" y2="85" stroke="rgba(0,229,176,0.4)" strokeWidth="1"/>
+          <line x1="170" y1="85" x2="198" y2="85" stroke="rgba(0,229,176,0.25)" strokeWidth="1" strokeDasharray="3,3"/>
+        </g>
+        <circle cx="140" cy="85" r="3" fill="rgba(0,229,176,0.7)">
+          <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    );
+  }
+  // Default generic viz
+  return (
+    <div className="flex items-center justify-center w-full h-full p-8">
+      <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "var(--muted2)" }}>
+        {id.toUpperCase().replace(/-/g, " ")}
+      </span>
+    </div>
+  );
+}
