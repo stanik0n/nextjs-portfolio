@@ -11,16 +11,16 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
           <div className="space-y-5 text-[17px] leading-relaxed" style={{ color: "var(--text)" }}>
             <p>
-              I&apos;m a data engineer with <em className="text-white not-italic" style={{ fontStyle: "italic" }}>4+ years of experience</em> building the infrastructure that powers enterprise analytics — from Salesforce-to-AWS migrations to real-time Kafka ingestion pipelines and operational reporting systems.
+              I&apos;m a data engineer with <span style={{ color: "var(--white)" }}>4+ years of experience</span> building production data infrastructure. I&apos;ve worked across enterprise cloud migrations, real-time streaming pipelines, and operational reporting platforms at scale.
             </p>
             <p>
-              With a <span className="font-mono text-[0.88em]" style={{ color: "var(--accent)" }}>Master&apos;s in MIS</span> from the University of Houston, I focus on bridging engineering and analytics — designing production-ready solutions that are efficient, reliable, and built to scale.
+              Most recently I&apos;ve been working on community impact analytics at a nonprofit, and before that spent three years at a software firm in Hyderabad doing Salesforce-to-AWS migrations and Kafka ingestion pipelines for large enterprise clients.
             </p>
             <p>
-              My portfolio spans the full data stack: real-time streaming systems like <em style={{ color: "var(--white)" }}>SkyStream</em> (9,000 live aircraft, sub-5-second latency), large-scale analytics pipelines over <em style={{ color: "var(--white)" }}>500K+ records</em>, and cloud-native data platforms on BigQuery and AWS.
+              I hold a <span className="font-mono text-[0.88em]" style={{ color: "var(--accent)" }}>Master&apos;s in MIS</span> from the University of Houston. I care about systems that are reliable and observable, not just ones that run.
             </p>
             <p>
-              Actively targeting data engineering roles at companies like <em style={{ color: "var(--white)" }}>Amazon</em> and <em style={{ color: "var(--white)" }}>Tesla</em>.
+              Currently looking for data engineering roles. Open to relocation.
             </p>
           </div>
 
