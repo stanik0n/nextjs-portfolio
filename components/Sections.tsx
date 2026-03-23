@@ -11,16 +11,13 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
           <div className="space-y-5 text-[17px] leading-relaxed" style={{ color: "var(--text)" }}>
             <p>
-              I have <span style={{ color: "var(--white)" }}>4+ years</span> of hands-on experience across the full data stack. I started my career at a software firm in Hyderabad, where I spent three years doing enterprise-scale work: a Salesforce-to-AWS migration, Redshift warehouse design, Kafka ingestion layers, and PySpark pipelines processing tens of millions of records.
+              Data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> of experience building production pipelines, cloud data warehouses, and real-time streaming systems.
             </p>
             <p>
-              After that I moved to Houston for my <span className="font-mono text-[0.88em]" style={{ color: "var(--accent)" }}>Master&apos;s in MIS at the University of Houston</span>, and since graduating I&apos;ve been doing analytics engineering at a nonprofit, building their reporting infrastructure from scratch using PostgreSQL, Python ETL, and FastAPI.
+              I hold a <span style={{ color: "var(--white)" }}>Master&apos;s in MIS from the University of Houston</span> and have worked across enterprise migrations, Kafka ingestion layers, and operational reporting platforms.
             </p>
             <p>
-              I like working on systems where the data actually has to be correct — grant reporting, real-time pipelines, operational dashboards. The kind of work where bad data has real consequences.
-            </p>
-            <p>
-              Looking for a data engineering role where I can work on high-throughput infrastructure. Open to relocation.
+              I like working on systems where correctness actually matters. Currently looking for data engineering roles. Open to relocation.
             </p>
           </div>
 
