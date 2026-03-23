@@ -93,6 +93,29 @@ body {
   transform: translateY(0);
 }
 
+/* blog cards */
+.blog-card-featured {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: block;
+}
+.blog-card-featured:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+.blog-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.blog-card:hover {
+  border-color: var(--border2);
+  transform: translateY(-2px);
+}
+
 /* grid bg */
 .grid-bg {
   background-image:

@@ -117,10 +117,7 @@ export function Blog() {
           {featured && (
             <Link
               href={featured.href}
-              className="rounded-lg overflow-hidden grid md:grid-cols-2 transition-all duration-300 block"
-              style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
-              onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "var(--border2)"; el.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "var(--border)"; el.style.transform = ""; }}
+              className="blog-card-featured rounded-lg overflow-hidden grid md:grid-cols-2 transition-all duration-300 block"
             >
               <div className="flex items-center justify-center min-h-[240px]" style={{ background: "var(--bg2)" }}>
                 <PipelineDiagram />
@@ -144,10 +141,7 @@ export function Blog() {
               <Link
                 key={p.id}
                 href={p.href}
-                className="rounded-lg overflow-hidden flex flex-col transition-all duration-300"
-                style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "var(--border2)"; el.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "var(--border)"; el.style.transform = ""; }}
+                className="blog-card rounded-lg overflow-hidden flex flex-col transition-all duration-300"
               >
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.13em] mb-3" style={{ color: "var(--accent2)" }}>
