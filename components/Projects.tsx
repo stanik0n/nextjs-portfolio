@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { projects } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "./SectionHeading";
 
@@ -9,6 +10,17 @@ const tagColors: Record<string, string> = {
 };
 
 export default function Projects() {
+  const router = useRouter();
+
+  function handleCardClick(href: string) {
+    if (href === "#") return;
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noreferrer");
+    } else {
+      router.push(href);
+    }
+  }
+
   return (
     <section
       id="projects"
@@ -30,7 +42,8 @@ export default function Projects() {
               className={`rounded-lg overflow-hidden flex flex-col transition-all duration-300 group ${
                 p.featured ? "md:col-span-2 md:grid md:grid-cols-2" : ""
               }`}
-              style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
+              style={{ background: "var(--bg)", border: "1px solid var(--border)", cursor: "pointer" }}
+              onClick={() => handleCardClick((p.links.find(l => l.primary) || p.links[0]).href)}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
                 el.style.borderColor = "var(--border2)";
