@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { skills, experience, posts } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "./SectionHeading";
 
@@ -114,7 +115,7 @@ export function Blog() {
         <div className="space-y-5">
           {/* Featured */}
           {featured && (
-            <a
+            <Link
               href={featured.href}
               className="rounded-lg overflow-hidden grid md:grid-cols-2 transition-all duration-300 block"
               style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
@@ -134,13 +135,13 @@ export function Blog() {
                 <span className="font-mono text-[11px] uppercase tracking-wider self-start" style={{ color: "var(--accent)" }}>Read Case Study →</span>
                 <div className="font-mono text-[11px] mt-6 pt-4" style={{ color: "var(--muted)", borderTop: "1px solid var(--border)" }}>{featured.meta}</div>
               </div>
-            </a>
+            </Link>
           )}
 
           {/* Rest */}
           <div className="grid md:grid-cols-3 gap-5">
             {rest.map((p) => (
-              <a
+              <Link
                 key={p.id}
                 href={p.href}
                 className="rounded-lg overflow-hidden flex flex-col transition-all duration-300"
@@ -158,7 +159,7 @@ export function Blog() {
                   <span className="font-mono text-[11px] uppercase tracking-wider mb-3" style={{ color: "var(--accent)" }}>Read Post →</span>
                   <div className="font-mono text-[11px] pt-3" style={{ color: "var(--muted)", borderTop: "1px solid var(--border)" }}>{p.date}</div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
