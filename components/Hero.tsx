@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -32,7 +33,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-12 flex items-center w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-12 flex items-center justify-between w-full gap-16">
         {/* left */}
         <div className="max-w-2xl">
           <div
@@ -97,6 +98,25 @@ export default function Hero() {
             >
               Get in touch
             </a>
+          </div>
+        </div>
+
+        {/* right — photo */}
+        <div
+          className="hidden md:block flex-shrink-0"
+          style={{ opacity: 0, animation: "fade-up 0.7s 0.5s ease forwards" }}
+        >
+          <div
+            className="relative w-72 h-72 rounded-2xl overflow-hidden"
+            style={{ border: "1px solid var(--border2)", boxShadow: "0 0 60px rgba(99,195,255,0.07)" }}
+          >
+            <Image
+              src="/Rajesh-Portrait-1.jpeg"
+              alt="Sai Rajesh"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              priority
+            />
           </div>
         </div>
 
