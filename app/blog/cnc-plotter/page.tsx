@@ -14,69 +14,56 @@ export default function CncPost() {
       category="Hardware + IoT"
       stack={["Arduino", "ESP32", "Python", "GRBL", "IoT", "3D Printing"]}
     >
-      <h2 data-num="01 — OVERVIEW">Overview</h2>
       <p>
-        This project involved designing and building a low-cost CNC plotting machine using an Arduino
-        UNO-based control system. The machine converts digital designs into physical drawings by
-        interpreting G-code instructions and controlling stepper motors for precise X and Y axis motion.
-      </p>
-      <p>
-        The system was later extended with an <strong>IoT connectivity layer</strong>, enabling remote job
-        control, wireless G-code transmission, and live machine status monitoring over Wi-Fi — transforming
-        the plotter from a locally controlled device into a <em>network-connected smart fabrication system</em>.
+        I built a 2-axis CNC plotter from scratch using an Arduino UNO, GRBL firmware, and a
+        3D-printed frame. The machine takes digital designs, converts them to G-code, and
+        physically draws them with a pen. Later I extended it with an ESP32 Wi-Fi layer so the
+        whole thing could be controlled from a browser over the network.
       </p>
 
-      <h2 data-num="02 — ARCHITECTURE">System Architecture</h2>
-      <p>The system operates across four layers:</p>
+      <h2 data-num="01 — ARCHITECTURE">System Architecture</h2>
+      <p>The system is split into four layers:</p>
       <ul>
-        <li><strong>Design & G-code Generation Layer</strong> — PC software (Inkscape, Universal Gcode Sender)</li>
-        <li><strong>Connectivity Layer</strong> — ESP32 Wi-Fi module acting as a wireless bridge</li>
-        <li><strong>Motion Control Layer</strong> — Arduino UNO running GRBL firmware</li>
-        <li><strong>Mechanical Execution Layer</strong> — Stepper-driven X-Y axis system</li>
+        <li><strong>Design layer</strong> — Inkscape and Universal Gcode Sender on a PC generate the G-code</li>
+        <li><strong>Connectivity layer</strong> — ESP32 module acts as a wireless bridge over Wi-Fi</li>
+        <li><strong>Motion control layer</strong> — Arduino UNO running GRBL handles the actual movement</li>
+        <li><strong>Mechanical layer</strong> — NEMA 17 steppers drive the X-Y axes</li>
       </ul>
 
-      <h2 data-num="03 — HARDWARE">Electronics & Hardware</h2>
+      <h2 data-num="02 — HARDWARE">Electronics and Hardware</h2>
       <p>Main components:</p>
       <ul>
-        <li>Arduino UNO + CNC Shield V3.0</li>
+        <li>Arduino UNO with CNC Shield V3.0</li>
         <li>NEMA 17 stepper motors with A4988 drivers</li>
         <li>Linear rods with LM8UU bearings for smooth X-Y motion</li>
-        <li>Mini servo motor for pen lift mechanism</li>
-        <li>ESP32 Wi-Fi module for IoT connectivity</li>
-        <li>3D-printed frame and structural mounts</li>
+        <li>Mini servo motor for the pen lift mechanism</li>
+        <li>ESP32 Wi-Fi module for remote control</li>
+        <li>3D-printed frame and mounts</li>
         <li>12V power supply</li>
       </ul>
 
-      <h2 data-num="04 — IOT">IoT Extension — Smart CNC Connectivity</h2>
+      <h2 data-num="03 — IOT">Adding Wi-Fi Control</h2>
       <p>
-        To extend the system beyond a traditional desktop CNC setup, I integrated an{" "}
-        <strong>ESP32-based IoT communication layer</strong> that acts as a wireless bridge between the
-        machine and a networked control interface.
+        Out of the box, GRBL machines are controlled over a wired USB connection. I wanted to
+        remove that constraint, so I added an ESP32 between the network and the Arduino. The ESP32
+        receives G-code jobs over Wi-Fi and forwards them to the Arduino via serial. Telemetry
+        from the machine flows back the other way in real time.
       </p>
-      <p>Key capabilities:</p>
+      <p>This gave the plotter a few capabilities it didn't have before:</p>
       <ul>
-        <li>Wireless G-code transmission over Wi-Fi</li>
-        <li>Browser-based control interface for start, pause, and stop operations</li>
-        <li>Live machine status monitoring (job progress, motor state, uptime)</li>
+        <li>Wireless G-code transmission from any device on the network</li>
+        <li>Browser-based interface for start, pause, and stop</li>
+        <li>Live job progress and motor state monitoring</li>
         <li>Remote calibration and test routines</li>
         <li>Job completion and error notifications</li>
       </ul>
-      <p>
-        The ESP32 receives G-code commands over the network and streams them to the Arduino via serial
-        communication. Telemetry data from the machine is sent back to the interface, enabling real-time
-        monitoring. This introduced practical experience in{" "}
-        <em>IoT device communication, embedded networking, remote system control, and real-time telemetry handling</em>.
-      </p>
 
-      <h2 data-num="05 — SOFTWARE">Software Workflow</h2>
+      <h2 data-num="04 — SOFTWARE">Python Scripts</h2>
       <p>
-        I developed Python scripts to handle the software side of the system:
+        I wrote Python scripts to handle serial communication with the Arduino and automate
+        calibration routines. Mostly useful for testing motion sequences and logging telemetry
+        during development.
       </p>
-      <ul>
-        <li>Establish serial communication with the Arduino controller</li>
-        <li>Automate G-code transmission and motion test routines for calibration</li>
-        <li>Monitor controller responses and log machine telemetry from the IoT module</li>
-      </ul>
       <pre>{`# Serial communication with Arduino (GRBL)
 import serial, time
 
@@ -92,19 +79,13 @@ print(send_gcode('$H'))
 # Move to position
 print(send_gcode('G0 X50 Y50 F1000'))`}</pre>
 
-      <h2 data-num="06 — LEARNINGS">Skills Developed</h2>
+      <h2 data-num="05 — LEARNINGS">What I Learned</h2>
       <ul>
-        <li><strong>CNC motion control systems</strong> and GRBL firmware configuration</li>
-        <li><strong>3D printing</strong> for rapid mechanical prototyping</li>
-        <li><strong>Embedded systems</strong> programming with Arduino</li>
-        <li><strong>Python-based hardware communication</strong> over serial</li>
-        <li><strong>IoT device integration</strong> and wireless control systems</li>
-        <li><strong>Real-time telemetry monitoring</strong> and system-level integration</li>
+        <li><strong>GRBL is deceptively configurable.</strong> Most of the early calibration work came down to tuning step/mm values and acceleration limits — not code.</li>
+        <li><strong>3D printing for rapid iteration.</strong> Being able to print a new mount or bracket overnight and test it the next day made the mechanical side much faster to iterate on.</li>
+        <li><strong>Serial communication is simple but fragile.</strong> The ESP32-to-Arduino serial bridge worked well once I got the baud rates and buffer handling right, but it took some debugging to get there.</li>
+        <li><strong>IoT adds surface area.</strong> Adding network connectivity means adding a whole new failure mode. Handling disconnects and job interruptions gracefully took more thought than the happy path.</li>
       </ul>
-      <p>
-        The project strengthened my troubleshooting skills across multiple domains and demonstrated
-        how traditional electromechanical systems can be transformed into smart, network-connected devices.
-      </p>
     </PostLayout>
   );
 }

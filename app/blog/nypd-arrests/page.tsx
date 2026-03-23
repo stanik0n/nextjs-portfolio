@@ -14,51 +14,51 @@ export default function NypdPost() {
       category="Data Analytics"
       stack={["Alteryx", "BigQuery", "SQL", "Power BI", "Python", "pandas"]}
     >
-      <h2 data-num="01 — INTRO">Introduction</h2>
       <p>
-        This project explores over <strong>500,000 NYPD arrest records</strong> from 2023–2024 to understand
-        how crime patterns vary across time, boroughs, and demographics. My goal was to turn raw public data
-        into an interactive dashboard that helps visualize <em>when, where, and who</em> drives arrest
-        activity across New York City.
+        I took two years of NYPD arrest records — over <strong>500,000 rows</strong> — and built
+        a pipeline to clean, model, and visualize them. The goal was to surface patterns in when,
+        where, and what types of arrests happen across New York City. Public data like this is
+        messy and underdocumented, so a big part of the work was just making it usable.
       </p>
 
-      <h2 data-num="02 — PROCESS">The Process</h2>
+      <h2 data-num="01 — PROCESS">The Process</h2>
 
-      <h3>A. Data Profiling</h3>
+      <h3>Profiling with pandas</h3>
       <p>
-        I started by profiling the initial dataset using <strong>pandas</strong> to understand its structure,
-        completeness, and data quality. This helped identify missing values, check column consistency, and
-        reveal early insights like the total date range, distinct offense codes, and demographic distributions.
+        Before touching any tooling, I profiled the raw dataset in Python to understand what I was
+        working with: missing value rates, column consistency, date ranges, and demographic
+        distributions. This step usually surfaces the most important cleaning decisions before you
+        commit to a workflow.
       </p>
 
-      <h3>B. Data Cleaning with Alteryx</h3>
+      <h3>Cleaning with Alteryx</h3>
       <p>
-        After profiling, I used <strong>Alteryx Designer</strong> to clean and prepare the dataset. The
-        workflow involved:
+        I used Alteryx Designer to build the cleaning workflow. The main tasks were:
       </p>
       <ul>
-        <li>Removing null records and standardizing borough names</li>
-        <li>Expanding law categories (Felony, Misdemeanor, Violation) into analyzable dimensions</li>
-        <li>Formatting date and demographic fields for consistent modeling</li>
-        <li>Automating these transformations into a repeatable, auditable workflow</li>
+        <li>Removing null records and standardizing borough name formats</li>
+        <li>Expanding law category codes (Felony, Misdemeanor, Violation) into labeled dimensions</li>
+        <li>Formatting date and demographic fields consistently for downstream modeling</li>
       </ul>
-
-      <h3>C. Dimensional Modeling</h3>
       <p>
-        I organized the cleaned data into a structured model connecting <strong>dates, offenses,
-        demographics, and locations</strong>. This dimensional structure made it straightforward to analyze
-        arrest patterns across different perspectives — which boroughs report the most arrests, how offense
-        types vary by age group, and how patterns shift over time.
+        Alteryx made it easy to build this as a repeatable workflow. When NYPD releases updated
+        data, re-running the workflow takes minutes.
       </p>
 
-      <h3>D. BigQuery Integration</h3>
+      <h3>Dimensional Modeling</h3>
       <p>
-        To manage and query the large dataset efficiently, I loaded the cleaned records into{" "}
-        <strong>Google BigQuery</strong>. SQL analytical views aggregate arrests by borough, offense type,
-        gender, and age group. BigQuery&apos;s scalability allowed seamless exploration of 500K+ rows with
-        sub-second query responses — making it an ideal backend for Power BI.
+        I organized the cleaned data into a structure connecting dates, offenses, demographics, and
+        locations. This made it straightforward to slice the data across different dimensions in
+        Power BI without writing complex SQL every time.
       </p>
-      <pre>{`-- Example: Arrests by borough and offense category
+
+      <h3>Loading to BigQuery</h3>
+      <p>
+        I loaded the cleaned records into BigQuery and built SQL analytical views on top. BigQuery
+        handles 500K+ rows with sub-second query response, which made it a practical backend for
+        Power BI without needing to optimize constantly.
+      </p>
+      <pre>{`-- Arrests by borough and offense category
 SELECT
   ARREST_BORO,
   LAW_CAT_CD,
@@ -69,32 +69,29 @@ WHERE YEAR(ARREST_DATE) = 2024
 GROUP BY 1, 2
 ORDER BY 1, 3 DESC`}</pre>
 
-      <h2 data-num="03 — DASHBOARD">Data Visualization</h2>
+      <h2 data-num="02 — DASHBOARD">The Dashboard</h2>
       <p>
-        I built an interactive <strong>Power BI dashboard</strong> that brings the data to life through
-        charts, maps, and KPIs. The visuals allow users to explore arrest trends by time, borough, precinct,
-        and demographic — revealing patterns that aren&apos;t obvious in raw data.
+        The Power BI dashboard lets you explore arrest trends by time period, borough, precinct,
+        offense type, and demographics. Most of the interesting patterns only become visible once
+        you can cross-filter across these dimensions interactively.
       </p>
 
-      <h2 data-num="04 — INSIGHTS">Key Insights</h2>
+      <h2 data-num="03 — INSIGHTS">What the Data Showed</h2>
       <ul>
-        <li><strong>Brooklyn</strong> recorded the highest number of arrests among all five boroughs</li>
+        <li><strong>Brooklyn</strong> had the highest arrest count among the five boroughs</li>
         <li><strong>Assault and larceny</strong> were the most common offenses citywide</li>
         <li><strong>Males aged 25–44</strong> accounted for the largest share of arrests</li>
         <li><strong>Precinct 14</strong> in Manhattan had the highest individual arrest total</li>
-        <li>Crime density clusters appeared in <strong>Downtown Brooklyn, Midtown Manhattan, and the Bronx</strong></li>
+        <li>Crime density clusters concentrated in Downtown Brooklyn, Midtown Manhattan, and the Bronx</li>
       </ul>
 
-      <h2 data-num="05 — CONCLUSION">Conclusion</h2>
+      <h2 data-num="04 — LEARNINGS">What I Learned</h2>
       <p>
-        By following a simple three-step process — <em>profile, model, and visualize</em> — I transformed
-        raw NYPD arrest data into a meaningful and interactive story about New York City&apos;s crime landscape.
-        This project shows how open data, when properly structured and visualized, can help uncover deeper
-        insights about urban dynamics.
-      </p>
-      <p>
-        The pipeline is fully repeatable: when NYPD releases updated data, re-running the Alteryx workflow
-        and refreshing the BigQuery connection updates the entire dashboard automatically.
+        The most useful insight from this project wasn't about crime patterns — it was about data
+        quality. Raw public datasets are almost always messier than they look. Spending time on
+        profiling before building the pipeline saved a lot of rework downstream. A repeatable
+        cleaning workflow also means the analysis stays current as new data comes in, rather than
+        becoming a one-time snapshot.
       </p>
     </PostLayout>
   );

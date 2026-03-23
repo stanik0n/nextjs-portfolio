@@ -14,80 +14,67 @@ export default function EvPost() {
       category="Data Visualization"
       stack={["Python", "Data Visualization", "Public Datasets"]}
     >
-      <h2 data-num="01 — INTRO">Why EV Adoption Matters</h2>
       <p>
-        A decade ago, electric vehicles were a futuristic idea found mostly in Silicon Valley parking lots.
-        Today, they&apos;re reshaping America&apos;s automotive landscape. What began as a niche experiment has
-        become one of the fastest technology transitions in modern history — from fewer than{" "}
-        <strong>200,000 EVs in 2013</strong> to more than <strong>4 million registered nationwide by 2024</strong>.
-      </p>
-      <p>
-        This rapid expansion reflects not just consumer enthusiasm, but a massive public and private investment
-        in clean transportation. Federal programs like the Inflation Reduction Act and Infrastructure
-        Investment and Jobs Act have unlocked billions for EV tax credits, battery plants, and charging networks.
+        Electric vehicles went from fewer than <strong>200,000 registered nationwide in 2013</strong> to
+        more than <strong>4 million by 2024</strong>. That kind of growth rate doesn't happen on its
+        own. This post looks at how adoption spread across the country, where the charging
+        infrastructure is struggling to keep up, and what's driving the gap between leading and
+        lagging states.
       </p>
 
-      <h2 data-num="02 — EARLY">The Early Days (2010–2015): Electric Curiosity</h2>
+      <h2 data-num="01 — EARLY">The Early Days (2010–2015)</h2>
       <p>
-        Between 2010 and 2015, electric vehicles were more of a science experiment than a mass-market option.
-        Two models changed public perception: the <strong>Nissan Leaf</strong> (2010) proved that a fully
-        electric car could handle everyday commutes, while <strong>Tesla&apos;s Model S</strong> (2012) showed
-        that EVs could be fast, stylish, and aspirational.
+        The first wave of EVs was more proof-of-concept than mass market. The Nissan Leaf showed
+        that a fully electric car could handle daily commutes. Tesla's Model S showed that EVs
+        could be fast and aspirational. Together they changed the public conversation from "will
+        anyone buy these" to "who's buying them and why."
       </p>
       <p>
-        Early adoption clustered in a few forward-thinking states. California, Oregon, and Washington led
-        the charge, supported by aggressive clean-air mandates and early infrastructure pilots. By 2015,
-        California alone accounted for nearly half of all EVs in the United States.
-      </p>
-
-      <h2 data-num="03 — GROWTH">The Growth Era (2016–2020): From Niche to Normal</h2>
-      <p>
-        Falling battery prices, longer driving ranges, and a wave of new models — from the Chevrolet Bolt
-        to the Tesla Model 3 — turned EVs into realistic choices for everyday drivers. New growth pockets
-        appeared in Florida, Texas, and New York as urban density and consumer awareness increased.
-      </p>
-      <p>
-        By the end of 2020, more than <strong>1.5 million EVs</strong> were registered nationwide — a clear
-        shift from early adopters to mainstream consumers.
+        Early adoption was heavily concentrated in a few states. California, Oregon, and Washington
+        led by a wide margin, supported by clean-air mandates and early charging infrastructure.
+        By 2015, California alone accounted for nearly half of all EVs in the country.
       </p>
 
-      <h2 data-num="04 — INFRA">The Infrastructure Race (2020–2024)</h2>
+      <h2 data-num="02 — GROWTH">Growth Era (2016–2020)</h2>
       <p>
-        As EVs surged past the two-million mark, another race began — the race to keep them powered. Between
-        2020 and 2024, public charging infrastructure expanded from a scattered network to over{" "}
-        <strong>65,000 public stations and 180,000 charging ports</strong>.
+        Falling battery costs and longer ranges brought EVs within reach of everyday buyers. The
+        Chevy Bolt and Tesla Model 3 pushed the category further into the mainstream. New growth
+        pockets appeared in Florida, Texas, and New York as urban density and consumer awareness
+        increased. By the end of 2020, registrations had passed <strong>1.5 million nationwide</strong>.
       </p>
+
+      <h2 data-num="03 — INFRA">The Infrastructure Race (2020–2024)</h2>
       <p>
-        The NEVI program committed <strong>$5 billion</strong> in federal funding to build fast-charging
-        corridors along major highways. But the map still shows imbalance — coastal and urban regions
-        enjoy dense grids while much of the Midwest and South remain sparse.
+        As adoption accelerated, the pressure on charging infrastructure became obvious. Between
+        2020 and 2024, public charging expanded to over{" "}
+        <strong>65,000 stations and 180,000 ports</strong>. The NEVI program committed $5 billion
+        in federal funding for highway fast-charging corridors. But the map still shows real
+        imbalance: coastal and urban areas are reasonably covered, while most of the Midwest and
+        South remain sparse.
       </p>
       <pre>{`EV registrations 2020→2024:  +120%
 Public charging ports:        +80%
 
-Infrastructure is expanding — just not fast enough to match adoption.`}</pre>
+Infrastructure is growing — just not at the same pace as adoption.`}</pre>
 
-      <h2 data-num="05 — LEADERS">Leaders and Laggards</h2>
+      <h2 data-num="04 — LEADERS">State-Level Breakdown</h2>
       <p>
-        Comparing EVs per 10,000 residents with chargers per 10,000 EVs reveals two distinct clusters:
+        Looking at EVs per 10,000 residents alongside chargers per 10,000 EVs shows two distinct
+        clusters:
       </p>
       <ul>
         <li><strong>California</strong> — 319 EVs per 10K residents, 151 chargers per 10K EVs</li>
-        <li><strong>Washington & Colorado</strong> — 180+ chargers per 10K EVs, strong rebate programs</li>
+        <li><strong>Washington and Colorado</strong> — 180+ chargers per 10K EVs, strong rebate programs</li>
         <li><strong>Mississippi, North Dakota, West Virginia</strong> — fewer than 20 EVs per 10K residents</li>
         <li><strong>Louisiana</strong> — under 18 EVs per 10K residents, one of the lowest charger densities</li>
       </ul>
 
-      <h2 data-num="06 — FUTURE">2025 and Beyond</h2>
+      <h2 data-num="05 — FUTURE">What Comes Next</h2>
       <p>
-        The next decade will determine whether America&apos;s charging infrastructure can match its accelerating
-        EV adoption. The NEVI program will fund over <strong>500,000 public chargers</strong>, prioritizing
-        highway corridors and underserved communities.
-      </p>
-      <p>
-        In short, 2025 marks the start of a new era — one where the question is no longer{" "}
-        <em>if</em> Americans will drive electric, but <em>how quickly</em> the infrastructure can evolve
-        to keep them moving.
+        The NEVI program is expected to fund over 500,000 public chargers over the next several
+        years, with explicit focus on highway corridors and underserved communities. The question
+        now is less about whether EV adoption continues and more about whether the infrastructure
+        can close the gap with demand in the states that are already behind.
       </p>
     </PostLayout>
   );

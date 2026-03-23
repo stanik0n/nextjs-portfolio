@@ -22,15 +22,14 @@ export default function SkyStreamPost() {
         aggregate this into a free global feed of roughly <strong>9,000 aircraft</strong> at any given moment.
       </p>
       <p>
-        I wanted to build something that demonstrated a <em>complete</em> data engineering stack — not a tutorial
+        I wanted to build something that demonstrated a <em>complete</em> data engineering stack. Not a tutorial
         toy, but a system with real throughput, real latency constraints, and real architectural tradeoffs.
         Flight tracking hit all of those boxes.
       </p>
 
       <h2 data-num="02 — ARCHITECTURE">System Architecture</h2>
       <p>
-        The system has two paths: a <strong>hot path</strong> for live positions and a <strong>cold path</strong>{" "}
-        for historical storage. Everything runs in Docker containers orchestrated with Docker Compose on a Linux VPS.
+        The system has two paths: a <strong>hot path</strong> for live positions and a <strong>cold path</strong> for historical storage. Everything runs in Docker containers orchestrated with Docker Compose on a Linux VPS.
       </p>
       <pre>{`airplanes.live API
        │
