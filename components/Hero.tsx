@@ -32,9 +32,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-14 items-center w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-12 flex items-center w-full">
         {/* left */}
-        <div>
+        <div className="max-w-2xl">
           <div
             className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] mb-6"
             style={{ color: "var(--accent)", opacity: 0, animation: "fade-up 0.7s 0.1s ease forwards" }}
@@ -100,40 +100,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* right — stats panel */}
-        <div style={{ opacity: 0, animation: "fade-up 0.7s 0.5s ease forwards" }}>
-          <div className="rounded-lg overflow-hidden" style={{ background: "var(--bg1)", border: "1px solid var(--border)" }}>
-            <div className="flex items-center gap-3 px-5 py-3 font-mono text-[11px] tracking-wider" style={{ background: "var(--bg2)", borderBottom: "1px solid var(--border)", color: "var(--muted)" }}>
-              <div className="flex gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
-              </div>
-              pipeline.status
-            </div>
-            <div className="p-6 space-y-0">
-              {[
-                ["EXPERIENCE",       "4+",      "YRS"],
-                ["AIRCRAFT TRACKED", "~9,000",  "LIVE"],
-                ["PIPELINE LATENCY", "<5",      "SEC"],
-                ["ARREST RECORDS",   "500K+",   "ANALYZED"],
-                ["EDUCATION",        "MS MIS",  "UH"],
-              ].map(([label, val, unit]) => (
-                <div key={label} className="flex justify-between items-baseline py-3" style={{ borderBottom: "1px solid var(--border)" }}>
-                  <span className="font-mono text-[11px] tracking-wider" style={{ color: "var(--muted)" }}>{label}</span>
-                  <span className="font-display font-bold text-lg" style={{ color: "var(--white)" }}>
-                    {val}{" "}
-                    <span className="font-mono font-normal text-[10px]" style={{ color: "var(--accent)" }}>{unit}</span>
-                  </span>
-                </div>
-              ))}
-              <div className="flex items-center gap-2 pt-4 font-mono text-[11px]" style={{ color: "var(--accent2)" }}>
-                <PulseDot />
-                SkyStream pipeline · live
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* scroll hint */}
@@ -148,17 +114,5 @@ export default function Hero() {
         scroll
       </div>
     </section>
-  );
-}
-
-function PulseDot() {
-  return (
-    <span className="relative inline-block w-2 h-2">
-      <span className="block w-full h-full rounded-full" style={{ background: "var(--accent2)" }} />
-      <span
-        className="absolute inset-0 rounded-full animate-pulse-ring"
-        style={{ border: "1px solid var(--accent2)" }}
-      />
-    </span>
   );
 }
