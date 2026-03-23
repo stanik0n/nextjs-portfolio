@@ -12,13 +12,11 @@ const tagColors: Record<string, string> = {
 export default function Projects() {
   const router = useRouter();
 
-  function handleCardClick(href: string) {
-    if (href === "#") return;
-    if (href.startsWith("http")) {
-      window.open(href, "_blank", "noreferrer");
-    } else {
-      router.push(href);
-    }
+  function handleCardClick(links: typeof projects[0]["links"]) {
+    const internal = links.find(l => l.href.startsWith("/"));
+    if (internal) { router.push(internal.href); return; }
+    const external = links.find(l => l.href !== "#");
+    if (external) window.open(external.href, "_blank", "noreferrer");
   }
 
   return (
@@ -43,7 +41,7 @@ export default function Projects() {
                 p.featured ? "md:col-span-2 md:grid md:grid-cols-2" : ""
               }`}
               style={{ background: "var(--bg)", border: "1px solid var(--border)", cursor: "pointer" }}
-              onClick={() => handleCardClick((p.links.find(l => l.primary) || p.links[0]).href)}
+              onClick={() => handleCardClick(p.links)}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
                 el.style.borderColor = "var(--border2)";
