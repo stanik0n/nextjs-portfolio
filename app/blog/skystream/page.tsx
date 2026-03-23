@@ -168,9 +168,8 @@ otherwise                 →  CRUISE`}</pre>
 
       <hr />
       <p>
-        <a href="https://github.com/stanik0n/skystream" target="_blank" rel="noreferrer">GitHub →</a>
-        &nbsp;&nbsp;
         <a href="http://173.212.237.120:5173" target="_blank" rel="noreferrer">Live Demo →</a>
+        <a href="https://github.com/stanik0n/skystream" target="_blank" rel="noreferrer">GitHub →</a>
       </p>
     </PostLayout>
   );

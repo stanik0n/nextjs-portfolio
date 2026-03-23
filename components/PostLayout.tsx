@@ -180,10 +180,50 @@ export default function PostLayout({ title, date, category, stack, children }: P
         .post-body hr {
           border: none;
           border-top: 1px solid var(--border);
-          margin: 48px 0;
+          margin: 48px 0 32px;
         }
         .post-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; opacity: 0.85; }
         .post-body a:hover { opacity: 1; }
+        .post-body hr + p {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 0;
+        }
+        .post-body hr + p a {
+          display: inline-flex;
+          align-items: center;
+          font-family: 'DM Mono', monospace;
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 3px;
+          border: 1px solid var(--border2);
+          background: var(--bg1);
+          color: var(--text);
+          opacity: 1;
+          transition: border-color 0.15s, color 0.15s, background 0.15s;
+        }
+        .post-body hr + p a:first-child {
+          background: var(--accent);
+          color: var(--bg);
+          border-color: var(--accent);
+          font-weight: 500;
+        }
+        .post-body hr + p a:first-child:hover {
+          background: #8dd6ff;
+          border-color: #8dd6ff;
+          color: var(--bg);
+          opacity: 1;
+        }
+        .post-body hr + p a:not(:first-child):hover {
+          border-color: var(--accent);
+          color: var(--accent);
+          background: rgba(99,195,255,0.05);
+          opacity: 1;
+        }
         .post-body table {
           width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px;
         }
