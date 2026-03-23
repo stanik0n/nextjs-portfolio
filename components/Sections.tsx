@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { skills, experience, posts } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "./SectionHeading";
 
@@ -10,6 +11,15 @@ export function About() {
         <SectionTitle>About Me</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
           <div className="space-y-5 text-[17px] leading-relaxed" style={{ color: "var(--text)" }}>
+            <div className="flex items-center gap-5 mb-2">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0" style={{ border: "2px solid var(--border2)" }}>
+                <Image src="/Rajesh-Portrait-1.jpeg" alt="Sai Rajesh" fill style={{ objectFit: "cover" }} />
+              </div>
+              <div>
+                <div className="font-display font-bold text-[18px]" style={{ color: "var(--white)" }}>Sai Rajesh Tanikonda</div>
+                <div className="font-mono text-[11px] mt-0.5" style={{ color: "var(--muted)" }}>Data Engineer · Houston, TX</div>
+              </div>
+            </div>
             <p>
               Data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> of experience building production pipelines, cloud data warehouses, and real-time streaming systems.
             </p>
