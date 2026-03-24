@@ -7,10 +7,12 @@ export function About() {
   return (
     <section id="about" className="py-28" style={{ background: "var(--bg)" }}>
       <div className="max-w-6xl mx-auto px-12">
-        <SectionLabel>01 — Profile</SectionLabel>
-        <SectionTitle>About Me</SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="space-y-5 text-[17px] leading-relaxed" style={{ color: "var(--text)" }}>
+            <div className="mb-8">
+              <SectionLabel>01 — Profile</SectionLabel>
+              <SectionTitle>About Me</SectionTitle>
+            </div>
             <p>
               I&apos;m a data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> building production pipelines, cloud warehouses, and real-time streaming systems. I&apos;ve worked across enterprise migrations, ETL platforms, and reporting infrastructure that teams actually rely on.
             </p>
