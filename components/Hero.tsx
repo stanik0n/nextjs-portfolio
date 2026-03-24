@@ -33,7 +33,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-12 flex items-center justify-between w-full gap-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-12 flex flex-col-reverse md:flex-row items-center justify-between w-full gap-10 md:gap-16">
         {/* left */}
         <div className="max-w-2xl">
           <div
@@ -103,11 +103,11 @@ export default function Hero() {
 
         {/* right — photo */}
         <div
-          className="hidden md:block flex-shrink-0"
+          className="flex-shrink-0"
           style={{ opacity: 0, animation: "fade-up 0.7s 0.5s ease forwards" }}
         >
           <div
-            className="relative w-72 h-72 rounded-2xl overflow-hidden"
+            className="relative w-48 h-48 md:w-72 md:h-72 rounded-2xl overflow-hidden"
             style={{ border: "1px solid var(--border2)", boxShadow: "0 0 60px rgba(99,195,255,0.07)" }}
           >
             <Image
