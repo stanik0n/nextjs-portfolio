@@ -15,7 +15,10 @@ export function About() {
               I&apos;m a data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> building production pipelines, cloud warehouses, and real-time streaming systems. I&apos;ve worked across enterprise migrations, ETL platforms, and reporting infrastructure that teams actually rely on.
             </p>
             <p>
-              I hold a <span style={{ color: "var(--white)" }}>Master&apos;s in MIS from the University of Houston</span>. Currently looking for data engineering roles. Open to relocation.
+              I hold a <span style={{ color: "var(--white)" }}>Master&apos;s in MIS from the University of Houston</span>.
+            </p>
+            <p>Currently looking for data engineering roles.</p>
+            <p>Open to relocation.
             </p>
           </div>
 
