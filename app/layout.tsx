@@ -36,16 +36,6 @@ export default function RootLayout({
             >
               © 2026 Sai Rajesh Tanikonda · Data Engineer · Houston, TX
             </span>
-            <span
-              className="font-mono text-xs flex items-center gap-2"
-              style={{ color: "var(--muted2)" }}
-            >
-              <span
-                className="inline-block w-1.5 h-1.5 rounded-full"
-                style={{ background: "var(--accent2)" }}
-              />
-              SkyStream · live
-            </span>
           </div>
         </footer>
       </body>
