@@ -30,6 +30,11 @@ export default function NypdPost() {
         distributions. This step usually surfaces the most important cleaning decisions before you
         commit to a workflow.
       </p>
+      <img
+        src="/nypd/data%20prep.png"
+        alt="Data profiling output"
+        style={{ width: "100%", borderRadius: "6px", margin: "8px 0 24px" }}
+      />
 
       <h3>Cleaning with Alteryx</h3>
       <p>
@@ -44,6 +49,11 @@ export default function NypdPost() {
         Alteryx made it easy to build this as a repeatable workflow. When NYPD releases updated
         data, re-running the workflow takes minutes.
       </p>
+      <img
+        src="/nypd/data%20clean.png"
+        alt="Alteryx cleaning workflow"
+        style={{ width: "100%", borderRadius: "6px", margin: "8px 0 24px" }}
+      />
 
       <h3>Dimensional Modeling</h3>
       <p>
@@ -51,6 +61,11 @@ export default function NypdPost() {
         locations. This made it straightforward to slice the data across different dimensions in
         Power BI without writing complex SQL every time.
       </p>
+      <img
+        src="/nypd/data%20model.png"
+        alt="Data model diagram"
+        style={{ width: "100%", borderRadius: "6px", margin: "8px 0 24px" }}
+      />
 
       <h3>Loading to BigQuery</h3>
       <p>
@@ -75,6 +90,15 @@ ORDER BY 1, 3 DESC`}</pre>
         offense type, and demographics. Most of the interesting patterns only become visible once
         you can cross-filter across these dimensions interactively.
       </p>
+      <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, margin: "8px 0 24px", borderRadius: "6px", overflow: "hidden" }}>
+        <iframe
+          title="NYPD Arrests Dashboard"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZTlhZWY1NDctNzMzNy00Mzg3LWIwYzMtZGU3MzE3NTYxZTJiIiwidCI6IjFhMjg0Yzg2LWRiNDktNDM0YS1iYmNlLWM5NGRjZmE0NzhmYiJ9"
+          frameBorder={0}
+          allowFullScreen
+          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+        />
+      </div>
 
       <h2 data-num="03 — INSIGHTS">What the Data Showed</h2>
       <ul>
