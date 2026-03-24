@@ -27,12 +27,12 @@ export default function CncPost() {
 
       {/* Photos */}
       <img
-        src="https://rajeshchowdary.com/wp-content/uploads/2026/01/Picture1-1024x683.jpg"
+        src="/cnc/Picture1-1024x683.jpg"
         alt="CNC Plotter build"
         style={{ width: "100%", borderRadius: "6px", margin: "8px 0" }}
       />
       <img
-        src="https://rajeshchowdary.com/wp-content/uploads/2026/01/Plotter1-1024x571.jpg"
+        src="/cnc/Plotter1-1024x571.jpg"
         alt="CNC Plotter in action"
         style={{ width: "100%", borderRadius: "6px", margin: "8px 0 24px" }}
       />
@@ -46,7 +46,7 @@ export default function CncPost() {
         <li><strong>Mechanical layer</strong> — NEMA 17 steppers drive the X-Y axes</li>
       </ul>
       <img
-        src="https://rajeshchowdary.com/wp-content/uploads/2026/01/Picture2-1-1024x439.jpg"
+        src="/cnc/Picture2-1-768x329.jpg"
         alt="System architecture diagram"
         style={{ width: "100%", borderRadius: "6px", margin: "8px 0 24px" }}
       />
@@ -120,7 +120,7 @@ print(send_gcode('G0 X50 Y50 F1000'))  # move`}</pre>
       <video
         controls
         style={{ width: "100%", borderRadius: "6px", margin: "8px 0 24px" }}
-        src="https://rajeshchowdary.com/wp-content/uploads/2026/01/A815EF3D-DC40-4EC6-9F67-E10F22FACA03.mp4"
+        src="/cnc/A815EF3D-DC40-4EC6-9F67-E10F22FACA03.mp4"
       />
 
       <h2 data-num="08 — LEARNINGS">What I Learned</h2>
