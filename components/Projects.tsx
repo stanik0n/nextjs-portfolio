@@ -28,10 +28,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-12">
         <SectionLabel>02 — Work</SectionLabel>
         <SectionTitle>Projects</SectionTitle>
-        <p className="text-[17px] mb-14 max-w-xl leading-relaxed" style={{ color: "var(--muted)" }}>
-          End-to-end systems built to demonstrate real throughput, real
-          architectural tradeoffs, and production-grade thinking.
-        </p>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {projects.map((p) => (
