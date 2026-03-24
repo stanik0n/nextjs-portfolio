@@ -10,7 +10,7 @@ export const projects = [
     links: [
       { label: "↗ Live Demo", href: "http://173.212.237.120:5173", primary: true },
       { label: "GitHub", href: "https://github.com/stanik0n/skystream" },
-      { label: "Case Study →", href: "/blog/skystream" },
+      { label: "Blog Post →", href: "/blog/skystream" },
     ],
   },
   {
@@ -23,7 +23,7 @@ export const projects = [
     stack: ["FastAPI", "Redis", "PostgreSQL", "Docker", "Python"],
     links: [
       { label: "GitHub ↗", href: "https://github.com/stanik0n/url-shortener", primary: true },
-      { label: "Write-up →", href: "/blog/url-shortener" },
+      { label: "Blog Post →", href: "/blog/url-shortener" },
     ],
   },
   {
@@ -35,7 +35,7 @@ export const projects = [
     desc: "End-to-end analytics pipeline over 500K+ NYPD arrest records (2023–2024). Cleaned with Alteryx, modeled dimensionally, loaded to BigQuery for sub-second aggregations, visualized in an interactive Power BI dashboard by borough, offense type, and demographics.",
     stack: ["Alteryx", "BigQuery", "SQL", "Power BI", "Python"],
     links: [
-      { label: "Read Write-up →", href: "/blog/nypd-arrests", primary: true },
+      { label: "Blog Post →", href: "/blog/nypd-arrests", primary: true },
     ],
   },
   {
@@ -59,7 +59,7 @@ export const projects = [
     desc: "Visual deep-dive into U.S. electric vehicle adoption from 2010–2024. Analyzes charging infrastructure gaps, state-by-state adoption rates, and federal policy impact — from 200K EVs in 2013 to over 4 million by 2024.",
     stack: ["Python", "Data Viz", "Public Data"],
     links: [
-      { label: "Read Post →", href: "/blog/ev-adoption", primary: true },
+      { label: "Blog Post →", href: "/blog/ev-adoption", primary: true },
     ],
   },
   {
@@ -71,7 +71,7 @@ export const projects = [
     desc: "2-axis CNC plotting machine built with Arduino UNO + GRBL firmware, 3D-printed components, and NEMA 17 stepper motors. Extended with an ESP32 IoT layer for wireless G-code transmission, browser-based control, and real-time telemetry.",
     stack: ["Arduino", "ESP32", "Python", "GRBL", "IoT"],
     links: [
-      { label: "Read Write-up →", href: "/blog/cnc-plotter", primary: true },
+      { label: "Blog Post →", href: "/blog/cnc-plotter", primary: true },
     ],
   },
 ];

@@ -106,8 +106,8 @@ export function Blog() {
       style={{ background: "var(--bg1)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
     >
       <div className="max-w-6xl mx-auto px-12">
-        <SectionLabel>04 — Writing</SectionLabel>
-        <SectionTitle>Posts & Case Studies</SectionTitle>
+        <SectionLabel>04 — Blog</SectionLabel>
+        <SectionTitle>Blog Posts</SectionTitle>
         <p className="text-[17px] mb-14 max-w-xl leading-relaxed" style={{ color: "var(--muted)" }}>
           Deep dives into the systems I build — the architecture, the decisions, and what I learned.
         </p>
@@ -129,7 +129,7 @@ export function Blog() {
                 </div>
                 <div className="font-display font-bold text-[24px] mb-3 leading-tight" style={{ color: "var(--white)", letterSpacing: "-0.02em" }}>{featured.title}</div>
                 <p className="text-[14px] leading-relaxed mb-6" style={{ color: "var(--text)" }}>{featured.desc}</p>
-                <span className="font-mono text-[11px] uppercase tracking-wider self-start" style={{ color: "var(--accent)" }}>Read Case Study →</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider self-start" style={{ color: "var(--accent)" }}>Read Post →</span>
                 <div className="font-mono text-[11px] mt-6 pt-4" style={{ color: "var(--muted)", borderTop: "1px solid var(--border)" }}>{featured.meta}</div>
               </div>
             </Link>

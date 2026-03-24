@@ -4,7 +4,7 @@ import { SectionLabel, SectionTitle } from "@/components/SectionHeading";
 import BlogList from "@/components/BlogList";
 
 export const metadata: Metadata = {
-  title: "Writing — Sai Rajesh Tanikonda",
+  title: "Blog — Sai Rajesh Tanikonda",
   description: "Case studies and technical posts on data engineering, streaming systems, and analytics.",
 };
 
@@ -26,8 +26,8 @@ export default function BlogIndex() {
   return (
     <div className="min-h-screen pt-28 pb-24" style={{ background: "var(--bg)" }}>
       <div className="max-w-6xl mx-auto px-12">
-        <SectionLabel>Writing</SectionLabel>
-        <SectionTitle>Posts & Case Studies</SectionTitle>
+        <SectionLabel>Blog</SectionLabel>
+        <SectionTitle>Blog Posts</SectionTitle>
         <p className="text-[17px] max-w-xl leading-relaxed mb-16" style={{ color: "var(--muted)" }}>
           Deep dives into the systems I build — the architecture decisions, the failures, and what stuck.
         </p>
