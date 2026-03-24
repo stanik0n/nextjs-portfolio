@@ -43,9 +43,9 @@ export default function Nav() {
             <a
               href={l.href}
               className="font-mono text-[11px] uppercase tracking-widest transition-colors duration-200"
-              style={{ color: "var(--muted)" }}
+              style={{ color: "var(--text)" }}
               onMouseEnter={e => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={e => (e.currentTarget.style.color = "var(--muted)")}
+              onMouseLeave={e => (e.currentTarget.style.color = "var(--text)")}
             >
               {l.label}
             </a>
