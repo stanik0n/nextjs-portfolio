@@ -171,12 +171,100 @@ function ProjectViz({ id }: { id: string }) {
       </svg>
     );
   }
-  // Default generic viz
-  return (
-    <div className="flex items-center justify-center w-full h-full p-8">
-      <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "var(--muted2)" }}>
-        {id.toUpperCase().replace(/-/g, " ")}
-      </span>
-    </div>
-  );
+  if (id === "nypd") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <radialGradient id="ng"><stop offset="0%" stopColor="#63c3ff" stopOpacity="0.08"/><stop offset="100%" stopColor="#63c3ff" stopOpacity="0"/></radialGradient>
+        <rect width="280" height="180" fill="url(#ng)"/>
+        {/* bar chart */}
+        {[
+          { x: 30,  h: 90, label: "BK" },
+          { x: 75,  h: 65, label: "MN" },
+          { x: 120, h: 75, label: "BX" },
+          { x: 165, h: 40, label: "QN" },
+          { x: 210, h: 25, label: "SI" },
+        ].map(({ x, h, label }) => (
+          <g key={label}>
+            <rect x={x} y={140 - h} width="30" height={h} rx="2"
+              fill="rgba(99,195,255,0.12)" stroke="rgba(99,195,255,0.3)" strokeWidth="1"/>
+            <text x={x + 15} y="155" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="rgba(99,195,255,0.5)">{label}</text>
+          </g>
+        ))}
+        <line x1="20" y1="140" x2="250" y2="140" stroke="rgba(99,195,255,0.15)" strokeWidth="1"/>
+        <text x="20" y="20" fontFamily="monospace" fontSize="8" fill="rgba(99,195,255,0.35)" letterSpacing="1">ARRESTS BY BOROUGH · 500K+ RECORDS</text>
+      </svg>
+    );
+  }
+  if (id === "priceshield") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <radialGradient id="pg"><stop offset="0%" stopColor="#ff6b35" stopOpacity="0.08"/><stop offset="100%" stopColor="#ff6b35" stopOpacity="0"/></radialGradient>
+        <rect width="280" height="180" fill="url(#pg)"/>
+        {/* price line chart */}
+        <polyline points="20,130 55,110 90,120 125,85 160,95 195,60 230,75 260,50"
+          fill="none" stroke="rgba(255,107,53,0.5)" strokeWidth="1.5" strokeDasharray="4,2"/>
+        <polyline points="20,140 55,125 90,130 125,100 160,108 195,75 230,88 260,65"
+          fill="none" stroke="rgba(99,195,255,0.3)" strokeWidth="1" strokeDasharray="3,3"/>
+        {[55,125,195,260].map(x => (
+          <circle key={x} cx={x} cy={x === 55 ? 110 : x === 125 ? 85 : x === 195 ? 60 : 50}
+            r="3" fill="rgba(255,107,53,0.8)">
+            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+          </circle>
+        ))}
+        <text x="20" y="20" fontFamily="monospace" fontSize="8" fill="rgba(255,107,53,0.5)" letterSpacing="1">PRICE TRACKER · AMAZON · WALMART · TARGET</text>
+      </svg>
+    );
+  }
+  if (id === "ev-adoption") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <radialGradient id="eg"><stop offset="0%" stopColor="#00e5b0" stopOpacity="0.08"/><stop offset="100%" stopColor="#00e5b0" stopOpacity="0"/></radialGradient>
+        <rect width="280" height="180" fill="url(#eg)"/>
+        {/* exponential growth curve */}
+        <polyline points="20,145 55,138 90,128 125,112 160,90 195,62 230,38 260,20"
+          fill="none" stroke="rgba(0,229,176,0.5)" strokeWidth="1.5"/>
+        <polyline points="20,145 55,138 90,128 125,112 160,90 195,62 230,38 260,20"
+          fill="none" stroke="rgba(0,229,176,0.15)" strokeWidth="6"/>
+        {/* year labels */}
+        {[
+          { x: 20,  label: "2013" },
+          { x: 125, label: "2018" },
+          { x: 260, label: "2024" },
+        ].map(({ x, label }) => (
+          <text key={label} x={x} y="165" fontFamily="monospace" fontSize="7" fill="rgba(0,229,176,0.35)" textAnchor="middle">{label}</text>
+        ))}
+        <circle cx="260" cy="20" r="4" fill="rgba(0,229,176,0.6)">
+          <animate attributeName="r" values="4;10;4" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="20" y="18" fontFamily="monospace" fontSize="8" fill="rgba(0,229,176,0.4)" letterSpacing="1">EV ADOPTION · 200K → 4M REGISTERED</text>
+      </svg>
+    );
+  }
+  if (id === "cnc") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <radialGradient id="cg"><stop offset="0%" stopColor="#ff6b35" stopOpacity="0.06"/><stop offset="100%" stopColor="#ff6b35" stopOpacity="0"/></radialGradient>
+        <rect width="280" height="180" fill="url(#cg)"/>
+        {/* grid */}
+        {[0,1,2,3,4].map(i => (
+          <line key={`h${i}`} x1="30" y1={40 + i * 25} x2="250" y2={40 + i * 25} stroke="rgba(255,107,53,0.08)" strokeWidth="1"/>
+        ))}
+        {[0,1,2,3,4,5,6].map(i => (
+          <line key={`v${i}`} x1={30 + i * 37} y1="40" x2={30 + i * 37} y2="140" stroke="rgba(255,107,53,0.08)" strokeWidth="1"/>
+        ))}
+        {/* G-code path drawing an S shape */}
+        <polyline
+          points="80,140 80,90 140,90 140,65 200,65 200,90 140,90 140,115 200,115 200,140"
+          fill="none" stroke="rgba(255,107,53,0.45)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* pen head */}
+        <circle cx="80" cy="140" r="4" fill="rgba(255,107,53,0.7)">
+          <animateMotion dur="5s" repeatCount="indefinite"
+            path="M0,0 L0,-50 L60,-50 L60,-75 L120,-75 L120,-50 L60,-50 L60,-25 L120,-25 L120,0"/>
+        </circle>
+        <text x="20" y="18" fontFamily="monospace" fontSize="8" fill="rgba(255,107,53,0.45)" letterSpacing="1">CNC PLOTTER · ARDUINO + ESP32 + GRBL</text>
+      </svg>
+    );
+  }
+  return null;
 }
