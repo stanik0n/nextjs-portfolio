@@ -12,13 +12,10 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
           <div className="space-y-5 text-[17px] leading-relaxed" style={{ color: "var(--text)" }}>
             <p>
-              Data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> of experience building production pipelines, cloud data warehouses, and real-time streaming systems.
+              I&apos;m a data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> building production pipelines, cloud warehouses, and real-time streaming systems. I&apos;ve worked across enterprise migrations, ETL platforms, and reporting infrastructure that teams actually rely on.
             </p>
             <p>
-              I hold a <span style={{ color: "var(--white)" }}>Master&apos;s in MIS from the University of Houston</span> and have worked across enterprise migrations, Kafka ingestion layers, and operational reporting platforms.
-            </p>
-            <p>
-              I like working on systems where correctness actually matters. Currently looking for data engineering roles. Open to relocation.
+              I hold a <span style={{ color: "var(--white)" }}>Master&apos;s in MIS from the University of Houston</span>. Currently looking for data engineering roles. Open to relocation.
             </p>
           </div>
 
