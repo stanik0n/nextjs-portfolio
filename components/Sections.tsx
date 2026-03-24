@@ -17,7 +17,7 @@ export function About() {
               I&apos;m a data engineer with <span style={{ color: "var(--white)" }}>4+ years</span> building production pipelines, cloud warehouses, and real-time streaming systems. I&apos;ve worked across enterprise migrations, ETL platforms, and reporting infrastructure that teams actually rely on.
             </p>
             <p>
-              I hold a <span style={{ color: "var(--white)" }}>Master&apos;s in MIS from the University of Houston</span>.
+              I hold a <span style={{ color: "var(--accent)" }}>Master&apos;s in MIS from the University of Houston</span>.
             </p>
             <p>Currently looking for data engineering roles.</p>
             <p>Open to relocation.
@@ -48,11 +48,6 @@ export function About() {
                 </div>
               </div>
             ))}
-            <div className="rounded-md p-5 mt-2" style={{ background: "var(--bg1)", border: "1px solid var(--border)" }}>
-              <div className="font-display font-semibold text-[15px] mb-1" style={{ color: "var(--white)" }}>M.S. Management Information Systems</div>
-              <div className="font-mono text-[12px]" style={{ color: "var(--accent)" }}>University of Houston</div>
-              <div className="font-mono text-[11px] mt-1" style={{ color: "var(--muted)" }}>May 2025</div>
-            </div>
           </div>
         </div>
       </div>
