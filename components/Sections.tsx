@@ -173,9 +173,6 @@ export function Contact() {
             <p className="text-[17px] leading-relaxed mb-6" style={{ color: "var(--text)" }}>
               I&apos;m actively looking for data engineering roles where I can work on high-throughput streaming systems, large-scale data infrastructure, and the tooling that makes data reliable at scale.
             </p>
-            <p className="text-[17px] leading-relaxed mb-8" style={{ color: "var(--text)" }}>
-              If you&apos;re building something interesting — especially at companies like Amazon or Tesla — I&apos;d love to talk.
-            </p>
             <div className="space-y-3">
               {[
                 { icon: "✉", label: "Email",   value: "sairajesh@rajeshchowdary.com", href: "mailto:sairajesh@rajeshchowdary.com" },
