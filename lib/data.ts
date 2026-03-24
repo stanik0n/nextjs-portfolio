@@ -39,18 +39,6 @@ export const projects = [
     ],
   },
   {
-    id: "priceshield",
-    featured: false,
-    tag: "In Progress",
-    tagColor: "accent3",
-    title: "PriceShield",
-    desc: "Cross-retailer price tracker for Amazon, Walmart, Best Buy, Target, and Microcenter. Browser extension + web app using a four-strategy hybrid extraction approach (JSON-LD → meta → CSS → regex), Playwright scraping, BullMQ queues, TimescaleDB for price history.",
-    stack: ["Hono", "BullMQ", "Redis", "Playwright", "TimescaleDB", "WXT"],
-    links: [
-      { label: "GitHub (soon)", href: "#" },
-    ],
-  },
-  {
     id: "ev-adoption",
     featured: false,
     tag: "Data Visualization",

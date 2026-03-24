@@ -192,26 +192,6 @@ function ProjectViz({ id }: { id: string }) {
       </svg>
     );
   }
-  if (id === "priceshield") {
-    return (
-      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
-        <radialGradient id="pg"><stop offset="0%" stopColor="#ff6b35" stopOpacity="0.08"/><stop offset="100%" stopColor="#ff6b35" stopOpacity="0"/></radialGradient>
-        <rect width="280" height="180" fill="url(#pg)"/>
-        {/* price line chart */}
-        <polyline points="20,130 55,110 90,120 125,85 160,95 195,60 230,75 260,50"
-          fill="none" stroke="rgba(255,107,53,0.5)" strokeWidth="1.5" strokeDasharray="4,2"/>
-        <polyline points="20,140 55,125 90,130 125,100 160,108 195,75 230,88 260,65"
-          fill="none" stroke="rgba(99,195,255,0.3)" strokeWidth="1" strokeDasharray="3,3"/>
-        {[55,125,195,260].map(x => (
-          <circle key={x} cx={x} cy={x === 55 ? 110 : x === 125 ? 85 : x === 195 ? 60 : 50}
-            r="3" fill="rgba(255,107,53,0.8)">
-            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-          </circle>
-        ))}
-        <text x="20" y="20" fontFamily="monospace" fontSize="8" fill="rgba(255,107,53,0.5)" letterSpacing="1">PRICE TRACKER · AMAZON · WALMART · TARGET</text>
-      </svg>
-    );
-  }
   if (id === "ev-adoption") {
     return (
       <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
