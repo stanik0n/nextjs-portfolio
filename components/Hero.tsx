@@ -57,7 +57,7 @@ export default function Hero() {
             <span
               style={{
                 color: "transparent",
-                WebkitTextStroke: "1px rgba(99,195,255,0.35)",
+                WebkitTextStroke: "1px rgba(99,195,255,0.75)",
               }}
             >
               Tanikonda
