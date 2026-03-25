@@ -208,12 +208,11 @@ export function Contact() {
               </div>
               <div className="p-5 space-y-0">
                 {[
-                  ["STATUS",     "Open to offers",                 "yes"],
-                  ["ROLE",       "Data Engineer",                  "pref"],
-                  ["LOCATION",   "Houston, TX · Remote OK",        ""],
-                  ["DOMAINS",    "Streaming · Pipelines · Cloud",  "pref"],
-                  ["EDUCATION",  "MS MIS · Univ. of Houston",      ""],
-                  ["RESPONSE",   "< 24h",                          "yes"],
+                  ["STATUS",       "Open to full-time roles",           "yes"],
+                  ["LOOKING FOR", "Data Engineering Roles",          "pref"],
+                  ["STACK",       "AWS · Kafka · Spark · dbt",       ""],
+                  ["LOCATION",    "Houston, TX · Open to relocation", ""],
+                  ["RESPONSE",    "< 24h",                           "yes"],
                 ].map(([k, v, t]) => (
                   <div key={k} className="flex justify-between items-center py-2.5 font-mono text-[12px]" style={{ borderBottom: "1px solid var(--border)" }}>
                     <span style={{ color: "var(--muted)" }}>{k}</span>
