@@ -150,13 +150,11 @@ otherwise                 →  CRUISE`}</pre>
       </div>
 
       <h2 data-num="08 — LEARNINGS">What I Learned</h2>
-      <ul>
-        <li><strong>Checkpoints are double-edged.</strong> Spark checkpoints give fault tolerance but cause stale data replays after downtime. Always have a plan for resetting them.</li>
-        <li><strong>Design sinks to be independent.</strong> One sink failing should never take down another.</li>
-        <li><strong>Coordinate TTLs and staleness filters.</strong> If your consumer filters records older than 2 minutes, your producer must write fresher than that under all failure scenarios.</li>
-        <li><strong>deck.gl handles scale beautifully.</strong> WebGL-accelerated rendering handles 9,000+ moving points without issue. The layer API is clean and composable.</li>
-        <li><strong>WebSocket fan-out at scale needs care.</strong> Sending 9,000 aircraft to 100 concurrent users every 5 seconds is ~90MB/s. Viewport filtering is the next optimization.</li>
-      </ul>
+      <p><strong>Checkpoints are double-edged.</strong> Spark checkpoints give fault tolerance but cause stale data replays after downtime. Always have a plan for resetting them.</p>
+      <p><strong>Design sinks to be independent.</strong> One sink failing should never take down another.</p>
+      <p><strong>Coordinate TTLs and staleness filters.</strong> If your consumer filters records older than 2 minutes, your producer must write fresher than that under all failure scenarios.</p>
+      <p><strong>deck.gl handles scale beautifully.</strong> WebGL-accelerated rendering handles 9,000+ moving points without issue. The layer API is clean and composable.</p>
+      <p><strong>WebSocket fan-out at scale needs care.</strong> Sending 9,000 aircraft to 100 concurrent users every 5 seconds is ~90MB/s. Viewport filtering is the next optimization.</p>
 
       <h2 data-num="09 — ROADMAP">What&apos;s Next</h2>
       <ul>
