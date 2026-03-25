@@ -172,7 +172,7 @@ export function Contact() {
             </p>
             <div className="space-y-3">
               {[
-                { icon: "✉", label: "Email",   value: "sairajesh@rajeshchowdary.com", href: "mailto:sairajesh@rajeshchowdary.com" },
+                { icon: "✉", label: "Email",   value: "tanikondasairajesh@gmail.com", href: "mailto:tanikondasairajesh@gmail.com" },
                 { icon: "🌐", label: "Website", value: "rajeshchowdary.com",           href: "https://rajeshchowdary.com" },
                 { icon: "⌥", label: "GitHub",  value: "github.com/stanik0n",          href: "https://github.com/stanik0n" },
               ].map((c) => (

@@ -65,7 +65,7 @@ export default function Nav() {
 
         {/* Desktop CTA */}
         <a
-          href="mailto:sairajesh@rajeshchowdary.com"
+          href="mailto:tanikondasairajesh@gmail.com"
           className="hidden md:block font-mono text-[11px] uppercase tracking-widest px-4 py-2 rounded-sm transition-all"
           style={{ color: "var(--accent)", border: "1px solid var(--border2)" }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(99,195,255,0.08)"; }}
@@ -141,7 +141,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="mailto:sairajesh@rajeshchowdary.com"
+            href="mailto:tanikondasairajesh@gmail.com"
             className="font-mono text-[13px] uppercase tracking-widest py-3 mt-1"
             style={{ color: "var(--accent)" }}
             onClick={() => setOpen(false)}
