@@ -120,12 +120,13 @@ export const experience = [
   },
   {
     date: "2021 — 2023",
-    company: "Enterprise",
+    company: "Data & Analytics Consultancy",
     role: "Data Engineer",
     points: [
-      "Led Salesforce-to-AWS migration, redesigning data flows to reduce sync latency and improve reliability across downstream consumers.",
-      "Built real-time Kafka ingestion pipelines handling high-throughput event streams from multiple production systems.",
-      "Developed dbt transformation layers and Spark processing jobs for analytics-ready datasets in Redshift.",
+      "Delivered data engineering solutions across clients in logistics, manufacturing, retail, and financial services — designing pipelines tailored to each industry's scale and compliance requirements.",
+      "Led a Salesforce-to-AWS migration for a manufacturing client, redesigning data flows to cut sync latency and improve reliability across downstream reporting consumers.",
+      "Built real-time Kafka ingestion pipelines for a logistics client handling high-throughput shipment and tracking events from multiple operational systems.",
+      "Developed dbt transformation layers and Spark processing jobs producing analytics-ready datasets in Redshift, enabling self-serve BI across client teams.",
     ],
   },
   {
