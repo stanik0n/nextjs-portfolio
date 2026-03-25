@@ -140,9 +140,10 @@ export const experience = [
 ];
 
 export const skills = [
-  { group: "Streaming & Pipelines", tags: ["Apache Kafka", "Spark Streaming", "dbt", "Airflow"] },
-  { group: "Storage & Warehousing", tags: ["PostgreSQL", "TimescaleDB", "BigQuery", "Redis", "AWS S3", "Redshift"] },
-  { group: "Languages & Frameworks", tags: ["Python", "SQL", "FastAPI", "Hono", "React"] },
-  { group: "Analytics & Viz", tags: ["Power BI", "Alteryx", "deck.gl", "MapLibre GL"] },
-  { group: "Infra", tags: ["Docker", "AWS", "Salesforce", "Arduino", "ESP32"] },
+  { group: "Languages & Query", tags: ["Python", "SQL", "Java", "R", "SparkSQL"] },
+  { group: "Data Engineering", tags: ["Apache Kafka", "Apache Spark", "Apache Airflow", "Hadoop", "dbt"] },
+  { group: "Cloud Platforms", tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks"] },
+  { group: "Databases & Storage", tags: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "BigQuery", "Redshift", "TimescaleDB"] },
+  { group: "ML & Analytics", tags: ["Scikit-learn", "TensorFlow", "PyTorch", "NumPy", "Pandas"] },
+  { group: "Visualization & Tools", tags: ["Power BI", "Tableau", "QuickSight", "Docker", "Git"] },
 ];
