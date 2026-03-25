@@ -128,11 +128,16 @@ export default function PostLayout({ title, date, category, stack, children }: P
         .post-body pre code { background:none; border:none; color:inherit; padding:0; font-size:inherit; }
         .post-body ul, .post-body ol { margin: 0 0 18px 0; padding-left: 0; list-style: none; }
         .post-body ul li, .post-body ol li {
+          display: block !important;
           position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 16px;
+          line-height: 1.75;
+        }
+        .post-body ul li strong, .post-body ol li strong {
+          display: inline !important;
         }
         .post-body ul li::before {
           content: '→';
-          position: absolute; left: 0; top: 1px;
+          position: absolute; left: 0; top: 3px;
           font-family: 'DM Mono', monospace;
           font-size: 12px;
           color: var(--accent);
