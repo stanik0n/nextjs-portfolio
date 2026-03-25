@@ -109,33 +109,25 @@ export const posts = [
 
 export const experience = [
   {
-    date: "2023 — Present",
-    company: "Community Org · Houston",
-    role: "Data Analyst",
+    date: "Sep 2025 — Present",
+    company: "WoMen of Connections Ministry · Remote",
+    role: "Analyst, Community Platforms",
     points: [
-      "Designed and maintained operational reporting pipelines powering day-to-day program decisions across departments.",
-      "Built and managed data infrastructure connecting disparate source systems into a unified reporting layer.",
-      "Collaborated with stakeholders to translate business requirements into reliable, repeatable data products.",
+      "Unified 6 operational data sources into a PostgreSQL reporting layer via Python ETL and SQL transformations, cutting 20+ hours/week of manual reconciliation.",
+      "Enforced schema validation, deduplication, and cross-table reconciliation checks, reducing grant reporting discrepancies by 40%.",
+      "Built a FastAPI metrics service standardizing KPI definitions across the org, reducing ad hoc data requests by 40%.",
     ],
   },
   {
-    date: "2021 — 2023",
-    company: "Data & Analytics Consultancy",
+    date: "Jan 2020 — Jun 2023",
+    company: "Brainovision Solutions · Hyderabad, India",
     role: "Data Engineer",
     points: [
-      "Delivered data engineering solutions across clients in logistics, manufacturing, retail, and financial services — designing pipelines tailored to each industry's scale and compliance requirements.",
-      "Led a Salesforce-to-AWS migration for a manufacturing client, redesigning data flows to cut sync latency and improve reliability across downstream reporting consumers.",
-      "Built real-time Kafka ingestion pipelines for a logistics client handling high-throughput shipment and tracking events from multiple operational systems.",
-      "Developed dbt transformation layers and Spark processing jobs producing analytics-ready datasets in Redshift, enabling self-serve BI across client teams.",
-    ],
-  },
-  {
-    date: "2019 — 2021",
-    company: "Early Career",
-    role: "Data & BI Analyst",
-    points: [
-      "Built SQL-based reporting across operational databases serving finance and operations teams.",
-      "Maintained ETL processes, dashboards, and ad-hoc analyses supporting executive decision-making.",
+      "Owned architecture and delivery of an enterprise Salesforce-to-AWS migration — redesigning batch ingestion to incremental loads, cutting delivery timelines by 30% and processing latency by 20%.",
+      "Built AWS Glue pipelines ingesting structured and semi-structured data into S3/Redshift, applying partition pruning and WLM tuning to improve query performance by 40%.",
+      "Designed a Redshift-based Customer 360 warehouse unifying CRM, marketing, and service data across 5+ business units, giving 150+ analysts a single source of truth.",
+      "Integrated Apache Kafka to stream real-time CRM events into the ingestion layer, reducing data latency from overnight batch windows to under 15 minutes.",
+      "Diagnosed and resolved a PySpark shuffle bottleneck processing 10M+ records per batch, cutting pipeline runtime by 45%.",
     ],
   },
 ];
