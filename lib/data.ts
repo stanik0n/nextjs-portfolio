@@ -119,6 +119,15 @@ export const experience = [
     ],
   },
   {
+    date: "Jan 2024 — May 2025",
+    company: "University of Houston · Houston, TX",
+    role: "Instructional Assistant",
+    points: [
+      "Supported 140+ students across 2 courses, streamlining assignment workflows and providing one-on-one mentoring.",
+      "Built performance dashboards that helped professors identify at-risk students early and improve course delivery.",
+    ],
+  },
+  {
     date: "Jan 2020 — Jun 2023",
     company: "Brainovision Solutions · Hyderabad, India",
     role: "Data Engineer",
