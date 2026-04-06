@@ -170,10 +170,10 @@ export const experience = [
 ];
 
 export const skills = [
-  { group: "Languages & Query", tags: ["Python", "SQL", "Java", "R", "SparkSQL"] },
+  { group: "Languages & Query", tags: ["Python", "SQL", "Java", "SparkSQL"] },
   { group: "Data Engineering", tags: ["Apache Kafka", "Apache Spark", "Apache Airflow", "Hadoop", "dbt"] },
   { group: "Cloud Platforms", tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks"] },
   { group: "Databases & Storage", tags: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "BigQuery", "Redshift", "TimescaleDB"] },
-  { group: "ML & Analytics", tags: ["Scikit-learn", "TensorFlow", "PyTorch", "NumPy", "Pandas"] },
+  { group: "ML & Analytics", tags: ["Scikit-learn", "NumPy", "Pandas"] },
   { group: "Visualization & Tools", tags: ["Power BI", "Tableau", "QuickSight", "Docker", "Git"] },
 ];

@@ -14,10 +14,10 @@ export function About() {
               <SectionTitle>About Me</SectionTitle>
             </div>
             <p>
-              I&apos;m a Data Engineer / Analytics Engineer focused on building scalable data systems that turn raw data into reliable insights.
+              I build data systems that enable real-time decision-making across supply chain, operations, and analytics workflows.
             </p>
             <p>
-              I&apos;ve worked across real-world environments including supply chain and operational analytics, designing pipelines and data models that support inventory tracking, procurement workflows, and decision-making.
+              I&apos;ve built data pipelines and analytics systems used across supply chain and operational workflows, improving data latency, reliability, and decision speed.
             </p>
             <p>
               My work spans batch and streaming systems, analytics engineering, and data platform design, with a focus on performance, reliability, and usability.
@@ -32,10 +32,10 @@ export function About() {
               <div className="space-y-3">
                 {[
                   "Turning fragmented data into reliable, analytics-ready datasets",
-                  "Reducing data latency to enable near real-time decision-making",
-                  "Designing scalable pipelines for supply chain and operational workflows",
+                  "Reducing data latency for near real-time decision-making",
+                  "Designing scalable pipelines for supply chain and operations",
                   "Standardizing metrics and data models for consistent reporting",
-                  "Making data accessible to non-technical users through intuitive analytics layers",
+                  "Enabling non-technical users to access data through intuitive analytics",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-[15px] leading-relaxed" style={{ color: "var(--text)" }}>
                     <span className="font-mono text-[12px] flex-shrink-0 mt-0.5" style={{ color: "var(--accent)", opacity: 0.55 }}>&gt;</span>
