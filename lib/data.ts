@@ -5,7 +5,7 @@ export const projects = [
     tag: "âœ¦ Featured Project",
     tagColor: "accent",
     title: "SkyStream",
-    desc: "Real-time global flight tracking pipeline. Ingests ADS-B telemetry from ~9,000 aircraft every 10 seconds via Kafka â†’ Spark Structured Streaming â†’ Redis, rendered on a GPU-accelerated deck.gl map with sub-5-second end-to-end latency. Includes email landing alerts and 48-hour historical trail queries via TimescaleDB.",
+    desc: "Real-time global flight tracking pipeline. Ingests ADS-B telemetry from ~9,000 aircraft every 10 seconds via Kafka â†’ Spark Structured Streaming â†’ Redis, rendered on a GPU-accelerated deck.gl map with sub-5-second end-to-end latency. Includes email landing alerts and 48-hour historical trail queries via TimescaleDB. Provides real-time visibility into global flight activity, enabling low-latency tracking and analytics for operational monitoring.",
     stack: ["Python", "Apache Kafka", "Spark Streaming", "Redis", "TimescaleDB", "FastAPI", "deck.gl", "Docker"],
     links: [
       { label: "â†— Live Demo", href: "http://173.212.237.120:5173", primary: true },
@@ -19,7 +19,7 @@ export const projects = [
     tag: "Full-Stack Product",
     tagColor: "accent2",
     title: "FinSight",
-    desc: "AI-assisted financial analytics platform that brings market dashboards, portfolio intelligence, research notes, curated news, and Telegram delivery into one full-stack product powered by FastAPI, React, DuckDB, Spark, Kafka, and dbt.",
+    desc: "AI-assisted financial analytics platform that brings market dashboards, portfolio intelligence, research notes, curated news, and Telegram delivery into one full-stack product powered by FastAPI, React, DuckDB, Spark, Kafka, and dbt. Enables near real-time financial analysis and portfolio tracking by combining streaming data pipelines with scalable analytics and intuitive querying.",
     stack: ["React", "FastAPI", "DuckDB", "Apache Spark", "Apache Kafka", "dbt", "Telegram", "Docker"],
     links: [
       { label: "Live Demo", href: "https://finsight.rajeshchowdary.com/", primary: true },
@@ -46,7 +46,7 @@ export const projects = [
     tag: "Data Analytics",
     tagColor: "accent",
     title: "NYPD Arrests Pipeline",
-    desc: "End-to-end analytics pipeline over 500K+ NYPD arrest records (2023â€“2024). Cleaned with Alteryx, modeled dimensionally, loaded to BigQuery for sub-second aggregations, visualized in an interactive Power BI dashboard by borough, offense type, and demographics.",
+    desc: "End-to-end analytics pipeline over 500K+ NYPD arrest records (2023â€“2024). Cleaned with Alteryx, modeled dimensionally, loaded to BigQuery for sub-second aggregations, visualized in an interactive Power BI dashboard by borough, offense type, and demographics. Transforms raw public data into structured datasets and dashboards for analyzing trends across geography and time.",
     stack: ["Alteryx", "BigQuery", "SQL", "Power BI", "Python"],
     links: [
       { label: "Blog Post â†’", href: "/blog/nypd-arrests", primary: true },

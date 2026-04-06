@@ -71,9 +71,8 @@ export default function Hero() {
               opacity: 0, animation: "fade-up 0.7s 0.3s ease forwards",
             }}
           >
-            I build scalable data pipelines and cloud platforms that turn raw
-            data into reliable, high-impact systems. Focused on data architecture,
-            ETL development, and performance optimization.
+            I build data systems that enable real-time decision-making across
+            supply chain, operations, and analytics workflows.
           </p>
 
           <div
