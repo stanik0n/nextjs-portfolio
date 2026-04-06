@@ -145,19 +145,6 @@ export const experience = [
     ],
   },
   {
-    date: "2020 - 2023",
-    company: "Brainovision Solutions (Consulting)",
-    role: "Data Engineer to Analytics Engineering",
-    points: [
-      "Worked across multiple client engagements in supply chain and retail domains, building scalable data pipelines and analytics systems to support demand planning, inventory tracking, and operational decision-making.",
-      "Built supply chain data pipelines enabling near real-time inventory visibility and faster operational response.",
-      "Designed dimensional data models for procurement, supplier performance, and shipment analytics.",
-      "Reduced data latency from 12+ hours to under 1 hour using batch and streaming architectures.",
-      "Improved query performance and reduced compute costs through optimized data transformations.",
-      "Enabled business teams to analyze revenue and demand trends through Power BI and Tableau dashboards.",
-    ],
-  },
-  {
     date: "2024 - 2025",
     company: "University of Houston",
     role: "Teaching Assistant (Data & Analytics)",
@@ -165,6 +152,19 @@ export const experience = [
       "Supported coursework in SQL and analytics while helping students and faculty use data more effectively.",
       "Assisted 140+ students in SQL and analytics concepts.",
       "Built dashboards to help faculty identify at-risk students and improve course outcomes.",
+    ],
+  },
+  {
+    date: "2020 - 2023",
+    company: "Brainovision Solutions (Consulting)",
+    role: "Data Engineer",
+    points: [
+      "Worked across multiple client engagements in supply chain and retail domains, building scalable data pipelines and analytics systems to support demand planning, inventory tracking, and operational decision-making.",
+      "Built supply chain data pipelines enabling near real-time inventory visibility and faster operational response.",
+      "Designed dimensional data models for procurement, supplier performance, and shipment analytics.",
+      "Reduced data latency from 12+ hours to under 1 hour using batch and streaming architectures.",
+      "Improved query performance and reduced compute costs through optimized data transformations.",
+      "Enabled business teams to analyze revenue and demand trends through Power BI and Tableau dashboards.",
     ],
   },
 ];
