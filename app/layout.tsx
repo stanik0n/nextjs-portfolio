@@ -4,12 +4,12 @@ import Nav from "@/components/Nav";
 import Cursor from "@/components/Cursor";
 
 export const metadata: Metadata = {
-  title: "Sai Rajesh Tanikonda — Data Engineer",
+  title: "Sai Rajesh Tanikonda",
   description:
     "Data Engineer specializing in real-time pipelines, streaming infrastructure, and cloud data platforms. MS MIS, University of Houston.",
   keywords: ["data engineer", "kafka", "spark", "pipeline", "Houston"],
   openGraph: {
-    title: "Sai Rajesh Tanikonda — Data Engineer",
+    title: "Sai Rajesh Tanikonda â€” Data Engineer",
     description: "Building scalable data pipelines and cloud-based data platforms.",
     url: "https://rajeshchowdary.com",
     siteName: "Sai Rajesh Tanikonda",
@@ -34,7 +34,7 @@ export default function RootLayout({
               className="font-mono text-xs tracking-wider"
               style={{ color: "var(--muted2)" }}
             >
-              © 2026 Sai Rajesh Tanikonda · Data Engineer · Houston, TX
+              Â© 2026 Sai Rajesh Tanikonda Â· Data Engineer Â· Houston, TX
             </span>
           </div>
         </footer>
