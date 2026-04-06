@@ -14,6 +14,20 @@ export const projects = [
     ],
   },
   {
+    id: "finsight",
+    featured: false,
+    tag: "Full-Stack Product",
+    tagColor: "accent2",
+    title: "FinSight",
+    desc: "AI-assisted financial analytics platform that brings market dashboards, portfolio intelligence, research notes, curated news, and Telegram delivery into one full-stack product powered by FastAPI, React, DuckDB, Spark, Kafka, and dbt.",
+    stack: ["React", "FastAPI", "DuckDB", "Apache Spark", "Apache Kafka", "dbt", "Telegram", "Docker"],
+    links: [
+      { label: "Live Demo", href: "https://finsight.rajeshchowdary.com/", primary: true },
+      { label: "GitHub", href: "https://github.com/stanik0n/finsight" },
+      { label: "Blog Post", href: "/blog/finsight" },
+    ],
+  },
+  {
     id: "url-shortener",
     featured: false,
     tag: "System Design",
@@ -74,6 +88,16 @@ export const posts = [
     meta: "Kafka · Spark · Redis · deck.gl · TimescaleDB",
     href: "/blog/skystream",
     featured: true,
+  },
+  {
+    id: "finsight",
+    tag: "Full-Stack Product",
+    title: "Building FinSight: An AI-Assisted Financial Analytics Platform",
+    desc: "How I combined market data pipelines, warehouse modeling, portfolio tooling, news aggregation, and a natural-language query layer into one end-to-end investing product.",
+    date: "Apr 6, 2026",
+    meta: "React, FastAPI, DuckDB, Spark, Kafka, dbt",
+    href: "/blog/finsight",
+    featured: false,
   },
   {
     id: "url-shortener",

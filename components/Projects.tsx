@@ -168,6 +168,56 @@ function ProjectViz({ id }: { id: string }) {
       </svg>
     );
   }
+  if (id === "finsight") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <defs>
+          <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#63c3ff" stopOpacity="0.12"/>
+            <stop offset="100%" stopColor="#00e5b0" stopOpacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <rect width="280" height="180" rx="12" fill="url(#fg)"/>
+        <rect x="22" y="24" width="236" height="132" rx="8" fill="rgba(8,14,24,0.72)" stroke="rgba(99,195,255,0.16)" strokeWidth="1"/>
+        <rect x="34" y="38" width="66" height="18" rx="4" fill="rgba(99,195,255,0.08)" stroke="rgba(99,195,255,0.18)" strokeWidth="1"/>
+        <text x="67" y="50" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="rgba(99,195,255,0.62)">MARKETS</text>
+
+        <rect x="34" y="68" width="96" height="56" rx="6" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.16)" strokeWidth="1"/>
+        <polyline points="42,112 56,101 69,104 82,88 96,93 110,78 122,82"
+          fill="none" stroke="rgba(99,195,255,0.5)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="122" cy="82" r="3" fill="rgba(99,195,255,0.7)">
+          <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+
+        <rect x="144" y="68" width="46" height="56" rx="6" fill="rgba(0,229,176,0.04)" stroke="rgba(0,229,176,0.18)" strokeWidth="1"/>
+        {[0, 1, 2, 3].map((i) => (
+          <rect
+            key={i}
+            x={153 + i * 8}
+            y={110 - i * 10}
+            width="5"
+            height={10 + i * 10}
+            rx="1"
+            fill="rgba(0,229,176,0.45)"
+          />
+        ))}
+
+        <rect x="202" y="68" width="42" height="56" rx="6" fill="rgba(255,107,53,0.04)" stroke="rgba(255,107,53,0.16)" strokeWidth="1"/>
+        <path d="M210 81 H236" stroke="rgba(255,107,53,0.25)" strokeWidth="1"/>
+        <path d="M210 93 H236" stroke="rgba(255,107,53,0.25)" strokeWidth="1"/>
+        <path d="M210 105 H228" stroke="rgba(255,107,53,0.25)" strokeWidth="1"/>
+        <rect x="210" y="114" width="14" height="4" rx="2" fill="rgba(255,107,53,0.5)">
+          <animate attributeName="x" values="210;220;210" dur="3.6s" repeatCount="indefinite"/>
+        </rect>
+
+        <line x1="34" y1="140" x2="244" y2="140" stroke="rgba(99,195,255,0.12)" strokeWidth="1" strokeDasharray="4,4"/>
+        <circle cx="48" cy="140" r="2.5" fill="rgba(0,229,176,0.7)">
+          <animateMotion dur="5s" repeatCount="indefinite" path="M0,0 L188,0"/>
+        </circle>
+        <text x="34" y="154" fontFamily="monospace" fontSize="8" fill="rgba(99,195,255,0.4)" letterSpacing="1">FINSIGHT  AI QUERY  PORTFOLIO  NEWS</text>
+      </svg>
+    );
+  }
   if (id === "nypd") {
     return (
       <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
