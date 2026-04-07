@@ -13,17 +13,14 @@ export default function PostLayout({ title, date, category, stack, children }: P
   return (
     <article className="min-h-screen pt-28 pb-24" style={{ background: "var(--bg)" }}>
       <div className="max-w-3xl mx-auto px-8">
-
-        {/* back */}
         <Link
           href="/#blog"
           className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider mb-12 transition-opacity hover:opacity-60"
           style={{ color: "var(--muted)" }}
         >
-          ← Back
+          &lt; Back
         </Link>
 
-        {/* header */}
         <header className="mb-14">
           <div
             className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] mb-5"
@@ -50,7 +47,7 @@ export default function PostLayout({ title, date, category, stack, children }: P
             style={{ borderBottom: "1px solid var(--border)" }}
           >
             <span className="font-mono text-[12px]" style={{ color: "var(--muted)" }}>{date}</span>
-            <span style={{ color: "var(--muted2)" }}>·</span>
+            <span style={{ color: "var(--muted2)" }}>/</span>
             <div className="flex flex-wrap gap-2">
               {stack.map((s) => (
                 <span
@@ -65,11 +62,7 @@ export default function PostLayout({ title, date, category, stack, children }: P
           </div>
         </header>
 
-        {/* content */}
-        <div className="post-body">
-          {children}
-        </div>
-
+        <div className="post-body">{children}</div>
       </div>
 
       <style>{`
@@ -136,7 +129,7 @@ export default function PostLayout({ title, date, category, stack, children }: P
           display: inline !important;
         }
         .post-body ul li::before {
-          content: '→';
+          content: '>';
           position: absolute; left: 0; top: 3px;
           font-family: 'DM Mono', monospace;
           font-size: 12px;

@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const tagColors: Record<string, string> = {
   "Case Study · Deep Dive": "var(--accent2)",
-  "System Design":          "var(--accent2)",
-  "Data Analytics":         "var(--accent)",
-  "Data Visualization":     "var(--accent2)",
-  "Hardware + IoT":         "var(--accent3)",
+  "System Design": "var(--accent2)",
+  "Data Analytics": "var(--accent)",
+  "Data Visualization": "var(--accent2)",
+  "Hardware + IoT": "var(--accent3)",
 };
 
 type Post = {
@@ -64,7 +64,7 @@ export default function BlogList({ posts }: { posts: Post[] }) {
             className="font-mono text-[13px] pt-1 flex-shrink-0 transition-transform group-hover:translate-x-1"
             style={{ color: "var(--muted2)" }}
           >
-            →
+            &gt;
           </div>
         </Link>
       ))}

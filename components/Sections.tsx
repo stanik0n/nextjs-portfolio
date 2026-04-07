@@ -115,8 +115,8 @@ export function Experience() {
 }
 
 export function Blog() {
-  const featured = posts.find(p => p.featured);
-  const rest = posts.filter(p => !p.featured);
+  const featured = posts.find((p) => p.featured);
+  const rest = posts.filter((p) => !p.featured);
 
   return (
     <section
@@ -125,10 +125,10 @@ export function Blog() {
       style={{ background: "var(--bg1)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
     >
       <div className="max-w-6xl mx-auto px-12">
-        <SectionLabel>04 â€” Blog</SectionLabel>
+        <SectionLabel>04 / Blog</SectionLabel>
         <SectionTitle>Blog Posts</SectionTitle>
         <p className="text-[17px] mb-14 max-w-xl leading-relaxed" style={{ color: "var(--muted)" }}>
-          Deep dives into the systems I build â€” the architecture, the decisions, and what I learned.
+          Deep dives into the systems I build, the architecture, the decisions, and what I learned.
         </p>
 
         <div className="space-y-5">
@@ -147,7 +147,7 @@ export function Blog() {
                 </div>
                 <div className="font-display font-bold text-[24px] mb-3 leading-tight" style={{ color: "var(--white)", letterSpacing: "-0.02em" }}>{featured.title}</div>
                 <p className="text-[14px] leading-relaxed mb-6" style={{ color: "var(--text)" }}>{featured.desc}</p>
-                <span className="font-mono text-[11px] uppercase tracking-wider self-start" style={{ color: "var(--accent)" }}>Read Post â†’</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider self-start" style={{ color: "var(--accent)" }}>Read Post</span>
                 <div className="font-mono text-[11px] mt-6 pt-4" style={{ color: "var(--muted)", borderTop: "1px solid var(--border)" }}>{featured.meta}</div>
               </div>
             </Link>
@@ -167,7 +167,7 @@ export function Blog() {
                   </div>
                   <div className="font-display font-bold text-[17px] mb-2 leading-snug" style={{ color: "var(--white)", letterSpacing: "-0.01em" }}>{p.title}</div>
                   <p className="text-[13px] leading-relaxed mb-4 flex-1" style={{ color: "var(--text)" }}>{p.desc}</p>
-                  <span className="font-mono text-[11px] uppercase tracking-wider mb-3" style={{ color: "var(--accent)" }}>Read Post â†’</span>
+                  <span className="font-mono text-[11px] uppercase tracking-wider mb-3" style={{ color: "var(--accent)" }}>Read Post</span>
                   <div className="font-mono text-[11px] pt-3" style={{ color: "var(--muted)", borderTop: "1px solid var(--border)" }}>{p.date}</div>
                 </div>
               </Link>
@@ -183,7 +183,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-28" style={{ background: "var(--bg)" }}>
       <div className="max-w-6xl mx-auto px-12">
-        <SectionLabel>05 â€” Let&apos;s Talk</SectionLabel>
+        <SectionLabel>05 / Let&apos;s Talk</SectionLabel>
         <SectionTitle>Contact</SectionTitle>
         <div className="grid md:grid-cols-2 gap-20 mt-12">
           <div>
@@ -192,9 +192,9 @@ export function Contact() {
             </p>
             <div className="space-y-3">
               {[
-                { icon: "âœ‰", label: "Email",   value: "tanikondasairajesh@gmail.com", href: "mailto:tanikondasairajesh@gmail.com" },
-                { icon: "ðŸŒ", label: "Website", value: "rajeshchowdary.com",           href: "https://rajeshchowdary.com" },
-                { icon: "âŒ¥", label: "GitHub",  value: "github.com/stanik0n",          href: "https://github.com/stanik0n" },
+                { icon: "@", label: "Email", value: "tanikondasairajesh@gmail.com", href: "mailto:tanikondasairajesh@gmail.com" },
+                { icon: "W", label: "Website", value: "rajeshchowdary.com", href: "https://rajeshchowdary.com" },
+                { icon: "GH", label: "GitHub", value: "github.com/stanik0n", href: "https://github.com/stanik0n" },
               ].map((c) => (
                 <a
                   key={c.label}
@@ -211,7 +211,7 @@ export function Contact() {
                     <span className="block font-mono text-[10px] uppercase tracking-wider mb-0.5" style={{ color: "var(--muted)" }}>{c.label}</span>
                     <span className="font-mono text-[13px]">{c.value}</span>
                   </span>
-                  <span style={{ color: "var(--muted2)" }}>â†’</span>
+                  <span style={{ color: "var(--muted2)" }}>&gt;</span>
                 </a>
               ))}
             </div>
@@ -228,11 +228,11 @@ export function Contact() {
               </div>
               <div className="p-5 space-y-0">
                 {[
-                  ["STATUS",       "Open to full-time roles",           "yes"],
-                  ["LOOKING FOR", "Data Engineering Roles",          "pref"],
-                  ["STACK",       "AWS Â· Kafka Â· Spark Â· dbt",       ""],
-                  ["LOCATION",    "Houston, TX Â· Open to relocation", ""],
-                  ["RESPONSE",    "< 24h",                           "yes"],
+                  ["STATUS", "Open to full-time roles", "yes"],
+                  ["LOOKING FOR", "Data Engineering Roles", "pref"],
+                  ["STACK", "AWS / Kafka / Spark / dbt", ""],
+                  ["LOCATION", "Houston, TX / Open to relocation", ""],
+                  ["RESPONSE", "< 24h", "yes"],
                 ].map(([k, v, t]) => (
                   <div key={k} className="flex justify-between items-center py-2.5 font-mono text-[12px]" style={{ borderBottom: "1px solid var(--border)" }}>
                     <span style={{ color: "var(--muted)" }}>{k}</span>
@@ -252,29 +252,29 @@ function PipelineDiagram() {
   return (
     <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
       <pattern id="bp" width="40" height="40" patternUnits="userSpaceOnUse">
-        <path d="M40 0 L 0 0 0 40" fill="none" stroke="rgba(99,195,255,0.05)" strokeWidth="1"/>
+        <path d="M40 0 L 0 0 0 40" fill="none" stroke="rgba(99,195,255,0.05)" strokeWidth="1" />
       </pattern>
-      <rect width="400" height="240" fill="url(#bp)"/>
+      <rect width="400" height="240" fill="url(#bp)" />
       <g fontFamily="monospace" fontSize="9" fill="rgba(99,195,255,0.55)" letterSpacing="1">
-        <rect x="20" y="94" width="72" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1"/>
+        <rect x="20" y="94" width="72" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1" />
         <text x="56" y="113" textAnchor="middle">ADS-B API</text>
-        <line x1="92" y1="110" x2="116" y2="110" stroke="rgba(99,195,255,0.25)" strokeWidth="1"/>
-        <rect x="116" y="94" width="60" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1"/>
+        <line x1="92" y1="110" x2="116" y2="110" stroke="rgba(99,195,255,0.25)" strokeWidth="1" />
+        <rect x="116" y="94" width="60" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1" />
         <text x="146" y="113" textAnchor="middle">KAFKA</text>
-        <line x1="176" y1="110" x2="200" y2="110" stroke="rgba(99,195,255,0.25)" strokeWidth="1"/>
-        <rect x="200" y="94" width="60" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1"/>
+        <line x1="176" y1="110" x2="200" y2="110" stroke="rgba(99,195,255,0.25)" strokeWidth="1" />
+        <rect x="200" y="94" width="60" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1" />
         <text x="230" y="113" textAnchor="middle">SPARK</text>
-        <line x1="260" y1="110" x2="280" y2="110" stroke="rgba(99,195,255,0.2)" strokeWidth="1"/>
-        <line x1="280" y1="110" x2="280" y2="72" stroke="rgba(99,195,255,0.2)" strokeWidth="1"/>
-        <line x1="280" y1="110" x2="280" y2="148" stroke="rgba(0,229,176,0.2)" strokeWidth="1"/>
-        <rect x="290" y="56" width="56" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1"/>
+        <line x1="260" y1="110" x2="280" y2="110" stroke="rgba(99,195,255,0.2)" strokeWidth="1" />
+        <line x1="280" y1="110" x2="280" y2="72" stroke="rgba(99,195,255,0.2)" strokeWidth="1" />
+        <line x1="280" y1="110" x2="280" y2="148" stroke="rgba(0,229,176,0.2)" strokeWidth="1" />
+        <rect x="290" y="56" width="56" height="32" rx="3" fill="rgba(99,195,255,0.04)" stroke="rgba(99,195,255,0.2)" strokeWidth="1" />
         <text x="318" y="75" textAnchor="middle">REDIS</text>
-        <rect x="290" y="132" width="72" height="32" rx="3" fill="rgba(0,229,176,0.03)" stroke="rgba(0,229,176,0.2)" strokeWidth="1"/>
+        <rect x="290" y="132" width="72" height="32" rx="3" fill="rgba(0,229,176,0.03)" stroke="rgba(0,229,176,0.2)" strokeWidth="1" />
         <text x="326" y="151" textAnchor="middle" fill="rgba(0,229,176,0.55)">TIMESCALE</text>
       </g>
       <circle cx="146" cy="110" r="3" fill="none" stroke="rgba(99,195,255,0.5)">
-        <animate attributeName="r" values="3;20" dur="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.7;0" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="3;20" dur="2.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0" dur="2.5s" repeatCount="indefinite" />
       </circle>
     </svg>
   );

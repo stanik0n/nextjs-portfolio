@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Data Engineer specializing in real-time pipelines, streaming infrastructure, and cloud data platforms. MS MIS, University of Houston.",
   keywords: ["data engineer", "kafka", "spark", "pipeline", "Houston"],
   openGraph: {
-    title: "Sai Rajesh Tanikonda â€” Data Engineer",
+    title: "Sai Rajesh Tanikonda - Data Engineer",
     description: "Building scalable data pipelines and cloud-based data platforms.",
     url: "https://rajeshchowdary.com",
     siteName: "Sai Rajesh Tanikonda",
@@ -34,7 +34,7 @@ export default function RootLayout({
               className="font-mono text-xs tracking-wider"
               style={{ color: "var(--muted2)" }}
             >
-              Â© 2026 Sai Rajesh Tanikonda Â· Data Engineer Â· Houston, TX
+              Copyright 2026 Sai Rajesh Tanikonda / Data Engineer / Houston, TX
             </span>
           </div>
         </footer>
