@@ -13,17 +13,7 @@ export const projects = [
       { label: "Blog Post", href: "/blog/skystream" },
     ],
   },
-  {
-    id: "supply-chain",
-    featured: false,
-    tag: "Supply Chain & Data Engineering",
-    tagColor: "accent3",
-    title: "Supply Chain Analytics Platform (SAP + AWS)",
-    desc: "Built a data platform integrating SAP and operational datasets to support inventory planning, procurement analysis, and supplier performance tracking. Built ETL pipelines using AWS Glue and PySpark to process inventory and procurement data. Designed data models for KPIs such as inventory turnover, lead time, and stock aging. Enabled dashboards for monitoring supply-demand alignment and supplier performance across operational workflows.",
-    stack: ["AWS Glue", "PySpark", "SAP", "S3", "Redshift", "Power BI", "Python", "SQL"],
-    links: [],
-  },
-  {
+{
     id: "finsight",
     featured: false,
     tag: "Full-Stack Product",
