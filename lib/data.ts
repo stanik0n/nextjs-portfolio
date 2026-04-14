@@ -131,11 +131,11 @@ export const experience = [
     company: "WoMen of Connections Ministry",
     role: "Analytics Engineer (Data Analyst - Engineering)",
     points: [
-      "Built and scaled a centralized analytics layer integrating multiple operational data sources to support real-time decision-making across resource allocation and distribution workflows.",
-      "Built a unified analytics layer across 6 data sources, eliminating 20+ hours per week of manual reconciliation.",
-      "Implemented data quality validation and reconciliation logic, reducing reporting discrepancies by 40%.",
-      "Developed a metrics service to standardize KPI definitions and reduce ad hoc reporting.",
-      "Enabled leadership to identify underperforming programs and optimize resource allocation.",
+      "Built and scaled a centralized analytics layer integrating multiple operational data sources, enabling real-time visibility into inventory movement, demand patterns, and material distribution across operations.",
+      "Built a unified analytics layer across 6 data sources, eliminating 20+ hours per week of manual reconciliation and improving data consistency.",
+      "Implemented data validation and reconciliation logic across inventory and distribution datasets, reducing discrepancies by 40% and improving accuracy of operational reporting.",
+      "Developed KPI frameworks to track inventory flows, resource utilization, and demand patterns, standardizing reporting across supply chain workflows.",
+      "Enabled stakeholders to identify inefficiencies in material allocation and improve planning, replenishment decisions, and overall operational efficiency.",
     ],
   },
   {
@@ -143,9 +143,9 @@ export const experience = [
     company: "University of Houston",
     role: "Teaching Assistant (Data & Analytics)",
     points: [
-      "Supported coursework in SQL and analytics while helping students and faculty use data more effectively.",
-      "Assisted 140+ students in SQL and analytics concepts.",
-      "Built dashboards to help faculty identify at-risk students and improve course outcomes.",
+      "Supported coursework in SQL and analytics, helping students and faculty apply data-driven approaches to problem-solving.",
+      "Assisted 140+ students in SQL and analytics concepts, improving understanding of data analysis and reporting.",
+      "Built dashboards to help faculty identify at-risk students and improve course planning and outcomes.",
     ],
   },
   {
@@ -153,12 +153,12 @@ export const experience = [
     company: "Brainovision Solutions (Consulting)",
     role: "Data Engineer",
     points: [
-      "Worked across multiple client engagements in supply chain and retail domains, building scalable data pipelines and analytics systems to support demand planning, inventory tracking, and operational decision-making.",
-      "Built supply chain data pipelines enabling near real-time inventory visibility and faster operational response.",
-      "Designed dimensional data models for procurement, supplier performance, and shipment analytics.",
-      "Reduced data latency from 12+ hours to under 1 hour using batch and streaming architectures.",
-      "Improved query performance and reduced compute costs through optimized data transformations.",
-      "Enabled business teams to analyze revenue and demand trends through Power BI and Tableau dashboards.",
+      "Worked across multiple client engagements in supply chain and retail domains, building data pipelines and analytics systems to support demand planning, inventory tracking, and operational decision-making.",
+      "Built supply chain data pipelines enabling near real-time inventory visibility and faster operational response across warehouse and distribution systems.",
+      "Designed dimensional data models for inventory, supplier performance, and shipment analytics, improving reporting consistency and planning accuracy.",
+      "Analyzed supplier performance, lead times, and demand trends to support better purchasing and replenishment decisions.",
+      "Reduced data latency from 12+ hours to under 1 hour using optimized batch and streaming pipelines.",
+      "Improved query performance and reduced compute costs through efficient data modeling and transformation strategies.",
     ],
   },
 ];
