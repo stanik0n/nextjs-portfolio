@@ -41,7 +41,7 @@ export default function Hero() {
             style={{ color: "var(--accent)", opacity: 0, animation: "fade-up 0.7s 0.1s ease forwards" }}
           >
             <span className="block w-7 h-px" style={{ background: "var(--accent)", opacity: 0.5 }} />
-            Data Engineer · Houston, TX
+            Data Engineer · Supply Chain & Operations · Houston, TX
           </div>
 
           <h1
@@ -71,8 +71,9 @@ export default function Hero() {
               opacity: 0, animation: "fade-up 0.7s 0.3s ease forwards",
             }}
           >
-            I build data systems that enable real-time decision-making across
-            supply chain, operations, and analytics workflows.
+            I build data systems that improve inventory planning, supplier
+            performance, and operational decision-making across supply chain
+            and analytics workflows.
           </p>
 
           <div

@@ -39,8 +39,8 @@ export default function Projects() {
               className={`rounded-lg overflow-hidden flex flex-col transition-all duration-300 group ${
                 p.featured ? "md:col-span-2 md:grid md:grid-cols-2" : ""
               }`}
-              style={{ background: "var(--bg)", border: "1px solid var(--border)", cursor: "pointer" }}
-              onClick={() => handleCardClick(p.links)}
+              style={{ background: "var(--bg)", border: "1px solid var(--border)", cursor: p.links.length ? "pointer" : "default" }}
+              onClick={() => p.links.length && handleCardClick(p.links)}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement;
                 el.style.borderColor = "var(--border2)";
@@ -145,6 +145,40 @@ function ProjectViz({ id }: { id: string }) {
         </circle>
         <text x="20" y="284" fontFamily="monospace" fontSize="9" fill="rgba(99,195,255,0.35)" letterSpacing="2">
           SKYSTREAM LIVE ~9,000 AIRCRAFT
+        </text>
+      </svg>
+    );
+  }
+  if (id === "supply-chain") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <radialGradient id="scg">
+          <stop offset="0%" stopColor="#ff6b35" stopOpacity="0.08" />
+          <stop offset="100%" stopColor="#63c3ff" stopOpacity="0" />
+        </radialGradient>
+        <rect width="280" height="180" fill="url(#scg)" />
+        <g fontFamily="monospace" fontSize="8" letterSpacing="1">
+          <rect x="10" y="72" width="52" height="28" rx="3" fill="rgba(255,107,53,0.05)" stroke="rgba(255,107,53,0.3)" strokeWidth="1" />
+          <text x="36" y="88" textAnchor="middle" fill="rgba(255,107,53,0.65)">SAP</text>
+          <line x1="62" y1="86" x2="84" y2="86" stroke="rgba(99,195,255,0.3)" strokeWidth="1" />
+          <rect x="84" y="72" width="56" height="28" rx="3" fill="rgba(99,195,255,0.05)" stroke="rgba(99,195,255,0.25)" strokeWidth="1" />
+          <text x="112" y="88" textAnchor="middle" fill="rgba(99,195,255,0.65)">GLUE/S3</text>
+          <line x1="140" y1="86" x2="160" y2="86" stroke="rgba(99,195,255,0.3)" strokeWidth="1" />
+          <rect x="160" y="72" width="56" height="28" rx="3" fill="rgba(99,195,255,0.05)" stroke="rgba(99,195,255,0.25)" strokeWidth="1" />
+          <text x="188" y="88" textAnchor="middle" fill="rgba(99,195,255,0.65)">REDSHIFT</text>
+          <line x1="216" y1="86" x2="238" y2="86" stroke="rgba(0,229,176,0.3)" strokeWidth="1" />
+          <rect x="238" y="72" width="36" height="28" rx="3" fill="rgba(0,229,176,0.04)" stroke="rgba(0,229,176,0.25)" strokeWidth="1" />
+          <text x="256" y="88" textAnchor="middle" fill="rgba(0,229,176,0.65)">BI</text>
+          <text x="10" y="128" fill="rgba(255,107,53,0.5)">INVENTORY TURNOVER</text>
+          <text x="10" y="142" fill="rgba(99,195,255,0.4)">LEAD TIME · STOCK AGING</text>
+          <text x="10" y="156" fill="rgba(0,229,176,0.4)">SUPPLIER PERFORMANCE</text>
+        </g>
+        <circle cx="112" cy="86" r="3" fill="rgba(99,195,255,0.6)">
+          <animateMotion dur="3s" repeatCount="indefinite" path="M0,0 L76,0 L152,0" />
+          <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <text x="10" y="20" fontFamily="monospace" fontSize="8" fill="rgba(99,195,255,0.35)" letterSpacing="1">
+          SUPPLY CHAIN ANALYTICS · SAP + AWS
         </text>
       </svg>
     );

@@ -14,13 +14,13 @@ export function About() {
               <SectionTitle>About Me</SectionTitle>
             </div>
             <p>
-              I build data systems that enable real-time decision-making across supply chain, operations, and analytics workflows.
+              I am a data engineer with experience building scalable data pipelines and analytics systems. My work focuses on supply chain operations, including inventory planning, procurement analytics, and supplier performance tracking, enabling data-driven decision-making and operational efficiency.
             </p>
             <p>
-              I&apos;ve built data pipelines and analytics systems used across supply chain and operational workflows, improving data latency, reliability, and decision speed.
+              I&apos;ve built pipelines and analytics systems across supply chain and operational workflows, improving data latency, reliability, and decision speed for inventory, procurement, and supplier performance use cases.
             </p>
             <p>
-              My work spans batch and streaming systems, analytics engineering, and data platform design, with a focus on performance, reliability, and usability.
+              My work spans batch and streaming architectures, analytics engineering, and data platform design, with a focus on supply chain visibility and operational performance.
             </p>
           </div>
 
@@ -31,11 +31,11 @@ export function About() {
               </div>
               <div className="space-y-3">
                 {[
-                  "Turning fragmented data into reliable, analytics-ready datasets",
-                  "Reducing data latency for near real-time decision-making",
-                  "Designing scalable pipelines for supply chain and operations",
-                  "Standardizing metrics and data models for consistent reporting",
-                  "Enabling non-technical users to access data through intuitive analytics",
+                  "Inventory planning and stock visibility through reliable data pipelines",
+                  "Procurement analytics and supplier performance tracking",
+                  "Reducing data latency for near real-time supply chain decision-making",
+                  "Designing scalable pipelines across supply chain and operations workflows",
+                  "Standardizing KPIs and data models for consistent operational reporting",
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-[15px] leading-relaxed" style={{ color: "var(--text)" }}>
                     <span className="font-mono text-[12px] flex-shrink-0 mt-0.5" style={{ color: "var(--accent)", opacity: 0.55 }}>&gt;</span>

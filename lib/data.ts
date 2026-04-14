@@ -5,7 +5,7 @@ export const projects = [
     tag: "Featured Project",
     tagColor: "accent",
     title: "SkyStream",
-    desc: "Real-time global flight tracking pipeline. Ingests ADS-B telemetry from ~9,000 aircraft every 10 seconds via Kafka to Spark Structured Streaming to Redis, rendered on a GPU-accelerated deck.gl map with sub-5-second end-to-end latency. Includes email landing alerts and 48-hour historical trail queries via TimescaleDB. Provides real-time visibility into global flight activity, enabling low-latency tracking and analytics for operational monitoring.",
+    desc: "Real-time global flight tracking pipeline. Ingests ADS-B telemetry from ~9,000 aircraft every 10 seconds via Kafka to Spark Structured Streaming to Redis, rendered on a GPU-accelerated deck.gl map with sub-5-second end-to-end latency. Includes email landing alerts and 48-hour historical trail queries via TimescaleDB. Demonstrates real-time system visibility and low-latency operational monitoring at scale.",
     stack: ["Python", "Apache Kafka", "Spark Streaming", "Redis", "TimescaleDB", "FastAPI", "deck.gl", "Docker"],
     links: [
       { label: "Live Demo", href: "http://173.212.237.120:5173", primary: true },
@@ -14,12 +14,22 @@ export const projects = [
     ],
   },
   {
+    id: "supply-chain",
+    featured: false,
+    tag: "Supply Chain & Data Engineering",
+    tagColor: "accent3",
+    title: "Supply Chain Analytics Platform (SAP + AWS)",
+    desc: "Built a data platform integrating SAP and operational datasets to support inventory planning, procurement analysis, and supplier performance tracking. Built ETL pipelines using AWS Glue and PySpark to process inventory and procurement data. Designed data models for KPIs such as inventory turnover, lead time, and stock aging. Enabled dashboards for monitoring supply-demand alignment and supplier performance across operational workflows.",
+    stack: ["AWS Glue", "PySpark", "SAP", "S3", "Redshift", "Power BI", "Python", "SQL"],
+    links: [],
+  },
+  {
     id: "finsight",
     featured: false,
     tag: "Full-Stack Product",
     tagColor: "accent2",
     title: "FinSight",
-    desc: "AI-assisted financial analytics platform that brings market dashboards, portfolio intelligence, research notes, curated news, and Telegram delivery into one full-stack product powered by FastAPI, React, DuckDB, Spark, Kafka, and dbt. Enables near real-time financial analysis and portfolio tracking by combining streaming data pipelines with scalable analytics and intuitive querying.",
+    desc: "AI-assisted financial analytics platform that brings market dashboards, portfolio intelligence, research notes, curated news, and Telegram delivery into one full-stack product powered by FastAPI, React, DuckDB, Spark, Kafka, and dbt. Enables near real-time financial analysis and decision-making workflows by combining streaming data pipelines with scalable analytics and intuitive querying.",
     stack: ["React", "FastAPI", "DuckDB", "Apache Spark", "Apache Kafka", "dbt", "Telegram", "Docker"],
     links: [
       { label: "Live Demo", href: "https://finsight.rajeshchowdary.com/", primary: true },
@@ -33,7 +43,7 @@ export const projects = [
     tag: "System Design",
     tagColor: "accent2",
     title: "Scalable URL Shortener",
-    desc: "Cache-first URL shortener engineered for high read throughput. Redis handles the redirect hot path; async background workers flush click counters to PostgreSQL in batches. Real-time analytics UI, one-command Docker Compose deploy.",
+    desc: "Cache-first URL shortener engineered for high read throughput. Redis handles the redirect hot path; async background workers flush click counters to PostgreSQL in batches. Real-time analytics UI supports operational monitoring and decision-making workflows. One-command Docker Compose deploy.",
     stack: ["FastAPI", "Redis", "PostgreSQL", "Docker", "Python"],
     links: [
       { label: "GitHub", href: "https://github.com/stanik0n/url-shortener", primary: true },
