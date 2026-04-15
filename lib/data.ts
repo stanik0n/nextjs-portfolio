@@ -111,7 +111,7 @@ export const posts = [
     id: "demand-forecasting",
     tag: "ML · Supply Chain",
     title: "Building an M5 Demand Forecasting & Inventory Replenishment Pipeline",
-    desc: "How LightGBM, leakage-safe feature engineering, and a safety-stock simulation combine to turn Walmart's M5 dataset into actionable replenishment recommendations — with a three-persona Streamlit dashboard at the end.",
+    desc: "How LightGBM, leakage-safe feature engineering, and a safety-stock simulation combine to turn Walmart's M5 dataset into actionable replenishment recommendations, with a three-persona Streamlit dashboard at the end.",
     date: "Apr 15, 2026",
     meta: "Python · LightGBM · Streamlit · Parquet",
     href: "/blog/demand-forecasting",

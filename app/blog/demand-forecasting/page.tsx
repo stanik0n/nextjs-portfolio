@@ -17,8 +17,8 @@ export default function DemandForecastingPost() {
     >
       <p>
         Demand forecasting is one of those problems that looks approachable until you actually sit
-        down with it. The M5 competition dataset — Walmart daily sales across 10 stores and 3,000+
-        SKUs — gives you enough real-world noise to make that clear fast: promotions, weekends,
+        down with it. The M5 competition dataset (Walmart daily sales across 10 stores and 3,000+
+        SKUs) gives you enough real-world noise to make that clear fast: promotions, weekends,
         holidays, and sparse item histories all conspire to make a clean moving average look naive.
       </p>
       <p>
@@ -32,7 +32,7 @@ export default function DemandForecastingPost() {
       <p>
         Bad forecasts have a direct cost. Under-forecast and you stock out. Over-forecast and you
         tie up capital in inventory that sits on a shelf. The M5 dataset is interesting because it
-        is not a toy — it is real Walmart sales data with all the messiness that implies: zero-sale
+        is not a toy. It is real Walmart sales data with all the messiness that implies: zero-sale
         days, seasonal spikes, promotional effects, and item hierarchies.
       </p>
       <p>
@@ -86,14 +86,14 @@ export default function DemandForecastingPost() {
         daily sales are reshaped into a flat fact table, then enriched with:
       </p>
       <ul>
-        <li><strong>Lag features</strong> — sales at t-7, t-14, t-28 to capture weekly and monthly patterns</li>
-        <li><strong>Rolling aggregates</strong> — 7-day and 28-day rolling mean and standard deviation</li>
-        <li><strong>Calendar features</strong> — day of week, month, year, SNAP flags, and event indicators</li>
-        <li><strong>Price features</strong> — sell price, price change delta, and relative price position</li>
+        <li><strong>Lag features:</strong> sales at t-7, t-14, t-28 to capture weekly and monthly patterns</li>
+        <li><strong>Rolling aggregates:</strong> 7-day and 28-day rolling mean and standard deviation</li>
+        <li><strong>Calendar features:</strong> day of week, month, year, SNAP flags, and event indicators</li>
+        <li><strong>Price features:</strong> sell price, price change delta, and relative price position</li>
       </ul>
       <p>
         All lag and rolling features are computed with proper temporal shifts to prevent data
-        leakage. Validation splits are strictly time-based — no shuffle, no look-ahead.
+        leakage. Validation splits are strictly time-based with no shuffle and no look-ahead.
       </p>
 
       <h2 data-num="04 / MODELS">Baseline vs. LightGBM</h2>
@@ -138,12 +138,12 @@ export default function DemandForecastingPost() {
       <p>
         The reorder point is set as expected demand over the lead time plus safety stock. When
         simulated inventory falls below that threshold, a replenishment order is triggered. The
-        simulation is configurable — lead times, service level targets (the z factor), and
+        simulation is configurable: lead times, service level targets (the z factor), and
         starting inventory can all be adjusted through <code>settings.yaml</code>.
       </p>
       <p>
         The output includes per-item stockout risk, overstock events, days of supply, and
-        actionable reorder recommendations — the kind of numbers a planner actually needs.
+        actionable reorder recommendations for the planner.
       </p>
 
       <h2 data-num="06 / DASHBOARD">Three-Persona Dashboard</h2>
@@ -153,20 +153,20 @@ export default function DemandForecastingPost() {
       </p>
       <ul>
         <li>
-          <strong>Executive view</strong> — high-level KPIs: forecast accuracy summary, stockout
-          rate, overstock exposure, and top items at risk. Built for a quick status read.
+          <strong>Executive view:</strong> high-level KPIs including forecast accuracy summary,
+          stockout rate, overstock exposure, and top items at risk. Built for a quick status read.
         </li>
         <li>
-          <strong>Analyst view</strong> — model comparison charts, error distributions, and
+          <strong>Analyst view:</strong> model comparison charts, error distributions, and
           feature importance. Built for understanding where and why the models diverge.
         </li>
         <li>
-          <strong>Planner view</strong> — item-level forecast curves, inventory projections, and
+          <strong>Planner view:</strong> item-level forecast curves, inventory projections, and
           reorder recommendations. Built for operational decision-making.
         </li>
       </ul>
       <p>
-        The dashboard also supports a pilot mode — single-store testing before scaling — which
+        The dashboard also supports a pilot mode for single-store testing before scaling, which
         makes it practical to validate the pipeline behavior on a subset before committing to a
         full run.
       </p>

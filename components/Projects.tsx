@@ -291,6 +291,63 @@ function ProjectViz({ id }: { id: string }) {
       </svg>
     );
   }
+  if (id === "demand-forecasting") {
+    return (
+      <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
+        <defs>
+          <radialGradient id="dfg" cx="50%" cy="50%" r="55%">
+            <stop offset="0%" stopColor="#63c3ff" stopOpacity="0.09" />
+            <stop offset="100%" stopColor="#63c3ff" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <rect width="280" height="180" fill="url(#dfg)" />
+        {[45, 75, 105, 130].map((y) => (
+          <line key={y} x1="28" y1={y} x2="258" y2={y} stroke="rgba(99,195,255,0.06)" strokeWidth="1" />
+        ))}
+        <line x1="155" y1="28" x2="155" y2="140" stroke="rgba(99,195,255,0.22)" strokeWidth="1" strokeDasharray="4,3" />
+        <text x="158" y="36" fontFamily="monospace" fontSize="7" fill="rgba(99,195,255,0.38)" letterSpacing="1">FORECAST</text>
+        <polyline
+          points="28,118 55,106 82,112 108,94 132,99 155,82"
+          fill="none"
+          stroke="rgba(99,195,255,0.7)"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <polyline
+          points="155,82 178,72 202,62 228,67 258,50"
+          fill="none"
+          stroke="rgba(99,195,255,0.5)"
+          strokeWidth="1.5"
+          strokeDasharray="5,3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <polyline
+          points="155,82 178,60 202,47 228,53 258,37"
+          fill="none"
+          stroke="rgba(99,195,255,0.14)"
+          strokeWidth="1"
+          strokeDasharray="3,3"
+        />
+        <polyline
+          points="155,82 178,84 202,78 228,81 258,66"
+          fill="none"
+          stroke="rgba(99,195,255,0.14)"
+          strokeWidth="1"
+          strokeDasharray="3,3"
+        />
+        <line x1="28" y1="130" x2="258" y2="130" stroke="rgba(255,107,53,0.38)" strokeWidth="1" strokeDasharray="6,3" />
+        <text x="30" y="126" fontFamily="monospace" fontSize="7" fill="rgba(255,107,53,0.48)" letterSpacing="1">SAFETY STOCK</text>
+        <circle cx="155" cy="82" r="3.5" fill="rgba(99,195,255,0.65)">
+          <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <text x="20" y="18" fontFamily="monospace" fontSize="8" fill="rgba(99,195,255,0.38)" letterSpacing="1">
+          M5 LIGHTGBM 28-DAY DEMAND FORECAST
+        </text>
+      </svg>
+    );
+  }
   if (id === "cnc") {
     return (
       <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg" className="w-4/5 h-4/5">
