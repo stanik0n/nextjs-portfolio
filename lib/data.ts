@@ -28,6 +28,20 @@ export const projects = [
     ],
   },
   {
+    id: "demand-forecasting",
+    featured: false,
+    tag: "ML · Supply Chain",
+    tagColor: "accent2",
+    title: "M5 Demand Forecasting & Inventory Replenishment",
+    desc: "End-to-end ML pipeline built on Walmart's M5 dataset. Compares LightGBM gradient boosting against moving-average and seasonal-naive baselines, simulates reorder points with configurable safety-stock calculations, and delivers results through a three-persona Streamlit dashboard covering executive KPIs, model comparison, and planner-level replenishment recommendations.",
+    stack: ["Python", "LightGBM", "Streamlit", "Pandas", "Parquet"],
+    links: [
+      { label: "Live Demo", href: "https://forecasting-9axkqjqv2oaebabshqbxjj.streamlit.app/", primary: true },
+      { label: "GitHub", href: "https://github.com/stanik0n/demandforecasting" },
+      { label: "Blog Post", href: "/blog/demand-forecasting" },
+    ],
+  },
+  {
     id: "url-shortener",
     featured: false,
     tag: "System Design",
@@ -91,6 +105,16 @@ export const posts = [
     date: "Apr 6, 2026",
     meta: "React, FastAPI, DuckDB, Spark, Kafka, dbt",
     href: "/blog/finsight",
+    featured: false,
+  },
+  {
+    id: "demand-forecasting",
+    tag: "ML · Supply Chain",
+    title: "Building an M5 Demand Forecasting & Inventory Replenishment Pipeline",
+    desc: "How LightGBM, leakage-safe feature engineering, and a safety-stock simulation combine to turn Walmart's M5 dataset into actionable replenishment recommendations — with a three-persona Streamlit dashboard at the end.",
+    date: "Apr 15, 2026",
+    meta: "Python · LightGBM · Streamlit · Parquet",
+    href: "/blog/demand-forecasting",
     featured: false,
   },
   {
