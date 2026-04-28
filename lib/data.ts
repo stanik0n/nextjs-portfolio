@@ -152,14 +152,13 @@ export const posts = [
 export const experience = [
   {
     date: "2025 – Present",
-    company: "WoMen of Connections Ministry",
-    role: "Analytics Engineer (Data Analyst - Engineering)",
+    company: "Cal4Care USA LLC (Supporting RingQ Ltd)",
+    role: "Supply Chain & Data Analyst",
     points: [
-      "Built and scaled a centralized analytics layer integrating multiple operational data sources, enabling real-time visibility into inventory movement, demand patterns, and resource distribution across operations.",
-      "Unified 6 data sources into a single analytics layer, eliminating 20+ hours per week of manual reconciliation and improving overall data consistency and reliability.",
-      "Implemented validation, deduplication, and reconciliation logic across inventory and distribution datasets, reducing discrepancies by 40% and strengthening operational reporting accuracy.",
-      "Developed KPI frameworks tracking inventory flows, resource utilization, and demand variability, standardizing reporting across supply chain workflows.",
-      "Enabled stakeholders to identify inefficiencies in allocation, improving planning, replenishment decisions, and overall operational efficiency.",
+      "Supported supply and distribution planning by analyzing demand patterns, operational requirements, and system constraints to improve service delivery and resource allocation.",
+      "Monitored inventory levels, material availability, and vendor dependencies, identifying risks such as shortages and excess stock to maintain operational continuity.",
+      "Evaluated supplier performance, lead times, and delivery trends, contributing to procurement planning and improved supply-demand alignment.",
+      "Built KPI frameworks and dashboards to track inventory movement, demand variability, and operational performance, enabling more consistent and data-driven decision-making.",
     ],
   },
   {
@@ -167,22 +166,21 @@ export const experience = [
     company: "University of Houston",
     role: "Instructional Assistant (Data & Analytics)",
     points: [
-      "Assisted 140+ students across SQL and analytics coursework, improving understanding of data analysis and reporting concepts.",
-      "Built performance dashboards to help faculty identify at-risk students and improve course planning and outcomes.",
-      "Supported data-driven decision-making by helping faculty apply analytics to course performance and student engagement.",
+      "Assisted 140+ students across SQL and analytics coursework, helping improve understanding of data analysis, querying, and reporting concepts.",
+      "Built dashboards to help faculty identify trends in student performance and support improvements in course delivery.",
+      "Supported data-driven decision-making by helping translate analytical outputs into actionable insights for faculty.",
     ],
   },
   {
     date: "2020 – 2023",
-    company: "Brainovision Solutions (Consulting)",
+    company: "Brainovision Solutions",
     role: "Data Engineer",
     points: [
-      "Delivered data engineering and analytics solutions across supply chain and retail domains, supporting demand planning, inventory tracking, and operational decision-making.",
-      "Built data pipelines enabling near real-time visibility into inventory movement and warehouse operations, improving responsiveness across distribution systems.",
-      "Designed dimensional data models for inventory, supplier performance, and shipment analytics, improving reporting consistency and planning accuracy.",
-      "Analyzed supplier performance, lead times, and demand trends to support procurement planning and supply-demand alignment.",
-      "Reduced data latency from 12+ hours to under 1 hour using optimized batch and streaming pipelines.",
-      "Improved query performance and reduced compute costs through efficient data modeling and transformation strategies.",
+      "Delivered data engineering and analytics solutions across multiple domains, supporting reporting, operational workflows, and decision-making processes.",
+      "Built and maintained data pipelines to enable timely access to operational and analytical data across systems.",
+      "Designed data models for tracking performance metrics across inventory, suppliers, and operations, improving consistency in reporting.",
+      "Analyzed trends in supply, demand, and operational performance to support planning and optimization efforts.",
+      "Improved data processing efficiency and reduced latency through optimized data workflows and transformations.",
     ],
   },
 ];
