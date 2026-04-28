@@ -14,13 +14,13 @@ export function About() {
               <SectionTitle>About Me</SectionTitle>
             </div>
             <p>
-              I am a data engineer with experience building scalable data pipelines and analytics systems. My work focuses on supply chain operations, including inventory planning, procurement analytics, and supplier performance tracking, enabling data-driven decision-making and operational efficiency.
+              I am a supply chain analyst with experience applying data analytics to improve planning, procurement, and operational decision-making. My work focuses on inventory visibility, demand analysis, and supplier performance tracking across supply chain workflows.
             </p>
             <p>
-              I&apos;ve built pipelines and analytics systems across supply chain and operational workflows, improving data latency, reliability, and decision speed for inventory, procurement, and supplier performance use cases.
+              I&apos;ve supported supply and distribution planning by building KPI frameworks, dashboards, and analytical models that translate operational data into clearer, faster decisions for inventory, procurement, and resource allocation.
             </p>
             <p>
-              My work spans batch and streaming architectures, analytics engineering, and data platform design, with a focus on supply chain visibility and operational performance.
+              My background spans supply chain analytics, data engineering, and reporting, with a focus on reducing inefficiencies, improving data reliability, and enabling teams to act on accurate, timely information.
             </p>
           </div>
 
