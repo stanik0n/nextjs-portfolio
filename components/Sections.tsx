@@ -14,13 +14,13 @@ export function About() {
               <SectionTitle>About Me</SectionTitle>
             </div>
             <p>
-              I am a supply chain analyst with experience applying data analytics to improve planning, procurement, and operational decision-making. My work focuses on inventory visibility, demand analysis, and supplier performance tracking across supply chain workflows.
+              I am a supply chain analyst focused on inventory planning, demand analysis, and procurement operations. I work at the intersection of supply chain strategy and operational execution, helping organizations reduce inefficiencies, improve stock visibility, and make better planning decisions.
             </p>
             <p>
-              I&apos;ve supported supply and distribution planning by building KPI frameworks, dashboards, and analytical models that translate operational data into clearer, faster decisions for inventory, procurement, and resource allocation.
+              My experience spans demand forecasting, supplier performance evaluation, inventory monitoring, and distribution planning. I translate operational data into insights that support replenishment decisions, procurement alignment, and resource allocation across supply chain functions.
             </p>
             <p>
-              My background spans supply chain analytics, data engineering, and reporting, with a focus on reducing inefficiencies, improving data reliability, and enabling teams to act on accurate, timely information.
+              I bring a structured, analytical approach to supply chain challenges — from identifying shortages and excess stock to standardizing KPIs that give teams consistent visibility into how supply, demand, and operations are performing.
             </p>
           </div>
 
