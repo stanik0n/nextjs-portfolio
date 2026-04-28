@@ -188,7 +188,7 @@ export function Contact() {
         <div className="grid md:grid-cols-2 gap-20 mt-12">
           <div>
             <p className="text-[17px] leading-relaxed mb-6" style={{ color: "var(--text)" }}>
-              I&apos;m actively looking for data engineering roles where I can work on high-throughput streaming systems, large-scale data infrastructure, and the tooling that makes data reliable at scale.
+              I&apos;m actively looking for supply chain roles where I can apply data analytics, demand planning, and operational insights to improve inventory visibility, procurement decisions, and overall supply chain performance.
             </p>
             <div className="space-y-3">
               {[
