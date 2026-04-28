@@ -252,8 +252,8 @@ export function Contact() {
               <div className="p-5 space-y-0">
                 {[
                   ["STATUS", "Open to full-time roles", "yes"],
-                  ["LOOKING FOR", "Data Engineering Roles", "pref"],
-                  ["STACK", "AWS / Kafka / Spark / dbt", ""],
+                  ["LOOKING FOR", "Supply Chain Roles", "pref"],
+                  ["FOCUS", "Planning / Analytics / Operations", ""],
                   ["LOCATION", "Houston, TX / Open to relocation", ""],
                   ["RESPONSE", "< 24h", "yes"],
                 ].map(([k, v, t]) => (
