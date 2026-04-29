@@ -153,12 +153,12 @@ export const experience = [
   {
     date: "2025 – Present",
     company: "Cal4Care USA LLC (Supporting RingQ Ltd)",
-    role: "Supply Chain & Data Analyst",
+    role: "Supply Chain Analyst",
     points: [
-      "Supported supply and distribution planning by analyzing demand patterns, operational requirements, and system constraints to improve service delivery and resource allocation.",
-      "Monitored inventory levels, material availability, and vendor dependencies, identifying risks such as shortages and excess stock to maintain operational continuity.",
-      "Evaluated supplier performance, lead times, and delivery trends, contributing to procurement planning and improved supply-demand alignment.",
-      "Built KPI frameworks and dashboards to track inventory movement, demand variability, and operational performance, enabling more consistent and data-driven decision-making.",
+      "Led end-to-end delivery of a hardware development project as project head, coordinating a cross-functional team across multiple regions and managing vendor negotiations and operations timelines from sourcing to completion.",
+      "Analyzed demand patterns, customer requirements, and operational constraints to support supply and distribution planning for telecom hardware across multiple product lines.",
+      "Led vendor performance evaluation process across hardware and service providers, consolidating lead time and delivery reliability data to support procurement planning and supply-demand alignment.",
+      "Built and standardized a KPI reporting framework tracking inventory turnover, demand variability, and order fulfillment across operations and procurement teams, reducing ad hoc analysis requests by 40%.",
     ],
   },
   {
@@ -176,11 +176,10 @@ export const experience = [
     company: "Brainovision Solutions",
     role: "Data Engineer",
     points: [
-      "Delivered data engineering and analytics solutions across multiple domains, supporting reporting, operational workflows, and decision-making processes.",
-      "Built and maintained data pipelines to enable timely access to operational and analytical data across systems.",
-      "Designed data models for tracking performance metrics across inventory, suppliers, and operations, improving consistency in reporting.",
-      "Analyzed trends in supply, demand, and operational performance to support planning and optimization efforts.",
-      "Improved data processing efficiency and reduced latency through optimized data workflows and transformations.",
+      "Designed and maintained data pipelines to integrate ERP and operational data across inventory, procurement, and order fulfillment workflows, improving data availability for planning teams.",
+      "Built planning datasets and data models combining supplier, warehouse, and transactional data to support demand forecasting, inventory tracking, and supply-demand analysis across client engagements.",
+      "Developed reporting datasets and dashboards tracking inventory movement, supplier performance, and fulfillment metrics, enabling operations and procurement teams to make faster, data-driven decisions.",
+      "Reduced inventory visibility lag from 12+ hours to under 1 hour by building near real-time pipelines tracking material movement and stock availability across warehouse operations.",
     ],
   },
 ];
