@@ -34,7 +34,7 @@ export default function RootLayout({
               className="font-mono text-xs tracking-wider"
               style={{ color: "var(--muted2)" }}
             >
-              Copyright 2026 Sai Rajesh Tanikonda / Data Engineer / Houston, TX
+              Copyright 2026 Sai Rajesh Tanikonda / Supply Chain Analyst / Houston, TX
             </span>
           </div>
         </footer>
