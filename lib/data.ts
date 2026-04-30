@@ -152,7 +152,7 @@ export const posts = [
 export const experience = [
   {
     date: "2025 – Present",
-    company: "Cal4Care USA LLC (Supporting RingQ Ltd)",
+    company: "Cal4Care USA LLC",
     role: "Supply Chain Analyst",
     points: [
       "Led end-to-end delivery of a hardware development project as project head, coordinating a cross-functional team across multiple regions and managing vendor negotiations and operations timelines from sourcing to completion.",
