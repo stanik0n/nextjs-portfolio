@@ -14,13 +14,13 @@ export function About() {
               <SectionTitle>About Me</SectionTitle>
             </div>
             <p>
-              I am a supply chain analyst focused on inventory planning, demand analysis, and procurement operations. I work at the intersection of supply chain strategy and operational execution, helping organizations reduce inefficiencies, improve stock visibility, and make better planning decisions.
+              I am a Supply Chain Analyst with 3+ years of experience in procurement, supplier performance management, and inventory planning across telecom hardware and manufacturing environments. I own the full PO lifecycle, lead RFQ/RFP processes, and drive supplier performance improvements that reduce lead times and improve fulfillment outcomes.
             </p>
             <p>
-              My experience spans demand forecasting, supplier performance evaluation, inventory monitoring, and distribution planning. I translate operational data into insights that support replenishment decisions, procurement alignment, and resource allocation across supply chain functions.
+              My work spans direct procurement, sourcing strategy, inventory assurance, and cross-border trade coordination. I work closely with suppliers, operations, and finance teams to align supply with demand, resolve escalations, and keep production programs on track.
             </p>
             <p>
-              I bring a structured, analytical approach to supply chain challenges — from identifying shortages and excess stock to standardizing KPIs that give teams consistent visibility into how supply, demand, and operations are performing.
+              I combine hands-on supply chain execution with analytical tools — SAP MM/SD, Power BI, and SQL — to build visibility into procurement operations, standardize KPI reporting, and support faster, more informed decision-making across supply chain functions.
             </p>
           </div>
 
