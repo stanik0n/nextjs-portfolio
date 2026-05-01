@@ -174,7 +174,7 @@ export const experience = [
   {
     date: "2020 – 2023",
     company: "Brainovision Solutions",
-    role: "Data Engineer",
+    role: "Supply Chain Analyst",
     points: [
       "Designed and maintained data pipelines to integrate ERP and operational data across inventory, procurement, and order fulfillment workflows, improving data availability for planning teams.",
       "Built planning datasets and data models combining supplier, warehouse, and transactional data to support demand forecasting, inventory tracking, and supply-demand analysis across client engagements.",
@@ -185,10 +185,8 @@ export const experience = [
 ];
 
 export const skills = [
-  { group: "Languages & Query", tags: ["Python", "SQL", "Java", "SparkSQL"] },
-  { group: "Data Engineering", tags: ["Apache Kafka", "Apache Spark", "Apache Airflow", "Hadoop", "dbt"] },
-  { group: "Cloud Platforms", tags: ["AWS", "Azure", "GCP", "Snowflake", "Databricks"] },
-  { group: "Databases & Storage", tags: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "BigQuery", "Redshift", "TimescaleDB"] },
-  { group: "ML & Analytics", tags: ["Scikit-learn", "NumPy", "Pandas"] },
-  { group: "Visualization & Tools", tags: ["Power BI", "Tableau", "QuickSight", "Docker", "Git"] },
+  { group: "Procurement & Sourcing", tags: ["RFQ/RFP/RFI", "PO Lifecycle Management", "Supplier Negotiation", "Contract Management", "Vendor Onboarding", "Spend Analysis", "Cost Modeling"] },
+  { group: "Supply Chain Operations", tags: ["Demand Planning", "Inventory Management", "MRP", "Supplier Scorecards", "KPI Reporting", "Corrective Action Plans"] },
+  { group: "Systems & Tools", tags: ["SAP MM", "SAP SD", "Advanced Excel", "Power BI", "Tableau", "SQL", "Python"] },
+  { group: "Certifications", tags: ["Lean Six Sigma Green Belt"] },
 ];

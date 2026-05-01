@@ -41,7 +41,7 @@ export default function Hero() {
             style={{ color: "var(--accent)", opacity: 0, animation: "fade-up 0.7s 0.1s ease forwards" }}
           >
             <span className="block w-7 h-px" style={{ background: "var(--accent)", opacity: 0.5 }} />
-            Data Engineer · Supply Chain & Operations · Houston, TX
+            Supply Chain Analyst · Procurement & Operations · Houston, TX
           </div>
 
           <h1

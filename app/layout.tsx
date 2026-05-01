@@ -6,11 +6,11 @@ import Cursor from "@/components/Cursor";
 export const metadata: Metadata = {
   title: "Sai Rajesh Tanikonda",
   description:
-    "Data Engineer specializing in real-time pipelines, streaming infrastructure, and cloud data platforms. MS MIS, University of Houston.",
-  keywords: ["data engineer", "kafka", "spark", "pipeline", "Houston"],
+    "Supply Chain Analyst with experience in procurement, supplier performance, inventory planning, and supply chain operations. MS MIS, University of Houston.",
+  keywords: ["supply chain analyst", "procurement", "inventory planning", "supplier performance", "Houston"],
   openGraph: {
-    title: "Sai Rajesh Tanikonda - Data Engineer",
-    description: "Building scalable data pipelines and cloud-based data platforms.",
+    title: "Sai Rajesh Tanikonda - Supply Chain Analyst",
+    description: "Supply chain professional specializing in procurement, inventory management, and operational analytics.",
     url: "https://rajeshchowdary.com",
     siteName: "Sai Rajesh Tanikonda",
     type: "website",
